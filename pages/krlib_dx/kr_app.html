@@ -66,17 +66,17 @@
               <span class="tag tag-method">メソッド</span>
             </div>
             <div class="class-links">
-              <a href="#method-01">GetWindowRect</a>
-              <a href="#method-02">GetWindowWid</a>
-              <a href="#method-03">GetWindowHei</a>
-              <a href="#method-03">GetWindowSize</a>
-              <a href="#method-03">GetFps</a>
-              <a href="#method-03">ToWorldPos</a>
-              <a href="#method-03">ToCameraPos</a>
-              <a href="#method-03">InitDx</a>
-              <a href="#method-03">LoopDx</a>
-              <a href="#method-03">Reset</a>
-              <a href="#method-03">Quit</a>
+              <a href="#method-GetWindowRect">GetWindowRect</a>
+              <a href="#method-GetWindowWid">GetWindowWid</a>
+              <a href="#method-GetWindowHei">GetWindowHei</a>
+              <a href="#method-GetWindowSize">GetWindowSize</a>
+              <a href="#method-GetFps">GetFps</a>
+              <a href="#method-ToWorldPos">ToWorldPos</a>
+              <a href="#method-ToCameraPos">ToCameraPos</a>
+              <a href="#method-InitDx">InitDx</a>
+              <a href="#method-LoopDx">LoopDx</a>
+              <a href="#method-Reset">Reset</a>
+              <a href="#method-Quit">Quit</a>
             </div>
           </div>
         </div>
@@ -102,78 +102,364 @@
           }
         </code></pre>
 
-        <p class="subtitle">
-          InitDx
-          <span class="label">static</span>
-        </p>
-        <!-- 関数データ -->
-        <div class="fn-meta">
-          <div class="fn-block">
+        <!-- [M] GetWindowRect -->
+        <details id="method-GetWindowRect" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            GetWindowRect
+          </summary>
+
+          <div class="fn-meta">
             <!-- 引数 -->
-            <div class="fn-title">引数</div>
-            <dl class="fn-list">
-              <div class="fn-item">
-                <dt><span class="type">int</span> windowWid</dt>
-                <dd>画面の横幅</dd>
-              </div>
-              <div class="fn-item">
-                <dt><span class="type">int</span> windowHei</dt>
-                <dd>画面の縦幅</dd>
-              </div>
-              <div class="fn-item">
-                <dt><span class="type">bool</span> isWindowMode</dt>
-                <dd>全画面にするか</dd>
-              </div>
-              <div class="fn-item">
-                <dt><span class="type">int</span> fps</dt>
-                <dd>Update / Draw処理のフレームレート</dd>
-              </div>
-              <div class="fn-item">
-                <dt><span class="type">bool</span> isVSync</dt>
-                <dd>垂直同期</dd>
-              </div>
-            </dl>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">INT_RECT</span></dt>
+                  <dd>画面の四角形</dd>
+                </div>
+              </dl>
+            </div>
           </div>
-          <!-- 返り値 -->
-          <div class="fn-block">
-            <div class="fn-title">返り値</div>
-            <dl class="fn-list">
-              <div class="fn-item">
-                <dt><span class="type">ResultInt</span></dt>
-                <dd>処理の結果</dd>
-              </div>
-            </dl>
+        </details>
+
+        <!-- [M] GetWindowWid -->
+        <details id="method-GetWindowWid" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            GetWindowWid
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span></dt>
+                  <dd>画面の横幅</dd>
+                </div>
+              </dl>
+            </div>
           </div>
-        </div>
+        </details>
+
+        <!-- [M] GetWindowHei -->
+        <details id="method-GetWindowHei" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            GetWindowHei
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span></dt>
+                  <dd>画面の縦幅</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] GetWindowSize -->
+        <details id="method-GetWindowSize" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            GetWindowSize
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">INT_XY</span></dt>
+                  <dd>画面のサイズ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] GetFps -->
+        <details id="method-GetFps" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            GetFps
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span></dt>
+                  <dd>フレームレート数</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] ToWorldPos -->
+        <details id="method-ToWorldPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            ToWorldPos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>座標</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span></dt>
+                  <dd>ワールド座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] ToCameraPos -->
+        <details id="method-ToCameraPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            ToCameraPos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>座標</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span></dt>
+                  <dd>カメラ座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] InitDx -->
+        <details id="method-InitDx" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            InitDx
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span> windowWid</dt>
+                  <dd>画面の横幅</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> windowHei</dt>
+                  <dd>画面の縦幅</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">bool</span> isWindowMode</dt>
+                  <dd>全画面にするか</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> fps</dt>
+                  <dd>Update / Draw処理のフレームレート</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">bool</span> isVSync</dt>
+                  <dd>垂直同期</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">ResultInt</span></dt>
+                  <dd>処理の結果</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
   
-        <p class="subtitle">
-          LoopDx
-          <span class="label">static</span>
-        </p>
-        <!-- 関数データ -->
-        <div class="fn-meta">
-          <div class="fn-block">
+        <!-- [M] LoopDx -->
+        <details id="method-LoopDx" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            LoopDx
+          </summary>
+
+          <div class="fn-meta">
             <!-- 引数 -->
-            <div class="fn-title">引数</div>
-            <dl class="fn-list">
-              <div class="fn-item">
-                <dt>なし</dt>
-              </div>
-            </dl>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
           </div>
-          <!-- 返り値 -->
-          <div class="fn-block">
-            <div class="fn-title">返り値</div>
-            <dl class="fn-list">
-              <div class="fn-item">
-                <dt>なし</dt>
-              </div>
-            </dl>
+        </details>
+
+        <!-- [M] Reset -->
+        <details id="method-Reset" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            Reset
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
           </div>
-        </div>
+        </details>
+
+        <!-- [M] Quit -->
+        <details id="method-Quit" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag static">static</span>
+            Quit
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
   
       </div>
-
     </section>
 
     <p>
