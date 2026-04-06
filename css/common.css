@@ -839,7 +839,8 @@ pre::-webkit-scrollbar-thumb:active {
 
 /* static */
 .mini-tag.static {
-  width: clamp(36px, 4vw, 42px);
+  width: auto;
+  padding: 0 5px;
 
   color: #7bf2ff;
   border-color: rgba(51,231,255,0.5);
