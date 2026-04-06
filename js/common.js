@@ -81,3 +81,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => ripple.remove(), 800);
   }
 });
+
+
+  // ツリー開閉
+document.querySelectorAll(".tree-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const node = header.parentElement;
+
+    // トグル
+    node.classList.toggle("open");
+  });
+});

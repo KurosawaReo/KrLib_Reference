@@ -62,6 +62,12 @@ section { scroll-margin-top: 80px; }
   letter-spacing: 0.2px; display: inline-block; position: relative;
 }
 
+/* imgタグ全て */
+img {
+  max-width: 100%; 
+  height: auto;
+}
+
 /* インラインコード */
 .inline-code {
   padding: 0px 5px;
@@ -688,4 +694,117 @@ pre::-webkit-scrollbar-thumb:active {
 
   text-shadow:
     0 0 6px rgba(51,231,255,0.5);
+}
+
+/* ===============================
+  ▼ トップページツリー ▼
+================================ */
+.tree-v {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ブロック */
+.tree-block {
+  position: relative;
+}
+
+/* ルート */
+.tree-root {
+  font-weight: 800;
+  margin-bottom: 8px;
+
+  padding-left: 12px;
+  border-left: 2px solid rgba(51,231,255,0.4);
+
+  font-size: 20px;
+
+  /* 控えめ発光 */
+  text-shadow:
+    0 0 6px rgba(51,231,255,0.4);
+}
+
+.tree-list {
+  margin-left: 10px;
+  padding-left: 13px;
+
+  position: relative; /* 追加 */
+}
+
+/* 縦線 */
+.tree-list::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 12px;
+
+  width: 1px;
+  background: rgba(51,231,255,0.25);
+}
+
+/* 各要素 */
+.tree-list a {
+  display: block;
+  position: relative;
+
+  padding: 6px 10px 6px 8px;
+  margin: 2px 0;
+
+  text-decoration: none;
+  color: var(--ink);
+
+  font-family: monospace;
+  font-size: 13px;
+
+  transition: 0.2s;
+}
+
+/* ├ の横線 */
+.tree-list a::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+
+  width: 10px;
+  height: 1px;
+
+  background: rgba(51,231,255,0.25);
+}
+
+/* ノード（点） */
+.tree-list a::after {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 50%;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+  background: rgba(51,231,255,0.6);
+
+  transform: translateY(-50%);
+}
+
+/* ホバー：光るだけ（scaleなし） */
+.tree-list a:hover {
+  color: #e6ffff;
+
+  text-shadow:
+    0 0 6px rgba(51,231,255,0.8),
+    0 0 12px rgba(51,231,255,0.5);
+
+  background: rgba(51,231,255,0.06);
+}
+
+/* ホバー時にノード発光 */
+.tree-list a:hover::after {
+  box-shadow:
+    0 0 6px rgba(51,231,255,1),
+    0 0 10px rgba(51,231,255,0.8);
 }
