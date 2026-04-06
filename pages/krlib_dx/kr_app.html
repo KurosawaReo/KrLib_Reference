@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KrLibリファレンス</title>
+
+  <!--ソースコード色付け用 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+
+  <!-- cssファイル -->
+  <link rel="stylesheet" href="../../plugins/KrLib_html/kr_common.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <!-- 背景 -->
+  <div class="bg-wrap">
+    <div class="light-beams"></div>
+    <canvas id="fx"></canvas>
+  </div>
+
+  <!-- ヘッダー -->
+  <header>
+    <nav class="nav">
+      <div class="brand">KR Library</div>
+      <div class="spacer"></div> <!-- スペース -->
+      <a href="../../">戻る</a>
+    </nav>
+  </header>
+
+  <!-- サイト本体 -->
+  <main class="wrap">
+
+    <section>
+      <h2 class="h2 neon">DxLib用 > KR_App</h2>
+
+      <div class="panel">
+        <div class="title-label">
+          <span class="label">class</span>
+          <span class="text">App</span>
+        </div>
+        <p>
+          アプリケーションの初期化・ループなどの制御を行うクラスです。<br>
+        </p>
+
+        <div class="class-top">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              <a href="#method-01">GetWindowRect</a>
+              <a href="#method-02">GetWindowWid</a>
+              <a href="#method-03">GetWindowHei</a>
+              <a href="#method-03">GetWindowSize</a>
+              <a href="#method-03">GetFps</a>
+              <a href="#method-03">ToWorldPos</a>
+              <a href="#method-03">ToCameraPos</a>
+              <a href="#method-03">InitDx</a>
+              <a href="#method-03">LoopDx</a>
+              <a href="#method-03">Reset</a>
+              <a href="#method-03">Quit</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="subtitle">使用例</p>
+        <p>
+          main関数で <span class="inline-code">InitDx</span> <span class="inline-code">LoopDx</span> を実行します。
+        </p>
+        <pre><code class="language-cpp">
+          int WINAPI WinMain(
+            _In_     HINSTANCE hinstance,
+            _In_opt_ HINSTANCE hPrevinstance,
+            _In_     LPSTR     lpCmdLine,
+            _In_     int       nCmdShow
+          ){
+            //初期化.
+            ResultInt err = App::InitDx(800, 600, true, 60, false);
+            if (err.GetCode() < 0) { return -1; } //初期化エラー.
+            //ループ.
+            App::LoopDx();
+
+            return 0;
+          }
+        </code></pre>
+
+        <p class="subtitle">
+          InitDx
+          <span class="label">static</span>
+        </p>
+        <!-- 関数データ -->
+        <div class="fn-meta">
+          <div class="fn-block">
+            <!-- 引数 -->
+            <div class="fn-title">引数</div>
+            <dl class="fn-list">
+              <div class="fn-item">
+                <dt><span class="type">int</span> windowWid</dt>
+                <dd>画面の横幅</dd>
+              </div>
+              <div class="fn-item">
+                <dt><span class="type">int</span> windowHei</dt>
+                <dd>画面の縦幅</dd>
+              </div>
+              <div class="fn-item">
+                <dt><span class="type">bool</span> isWindowMode</dt>
+                <dd>全画面にするか</dd>
+              </div>
+              <div class="fn-item">
+                <dt><span class="type">int</span> fps</dt>
+                <dd>Update / Draw処理のフレームレート</dd>
+              </div>
+              <div class="fn-item">
+                <dt><span class="type">bool</span> isVSync</dt>
+                <dd>垂直同期</dd>
+              </div>
+            </dl>
+          </div>
+          <!-- 返り値 -->
+          <div class="fn-block">
+            <div class="fn-title">返り値</div>
+            <dl class="fn-list">
+              <div class="fn-item">
+                <dt><span class="type">ResultInt</span></dt>
+                <dd>処理の結果</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+  
+        <p class="subtitle">
+          LoopDx
+          <span class="label">static</span>
+        </p>
+        <!-- 関数データ -->
+        <div class="fn-meta">
+          <div class="fn-block">
+            <!-- 引数 -->
+            <div class="fn-title">引数</div>
+            <dl class="fn-list">
+              <div class="fn-item">
+                <dt>なし</dt>
+              </div>
+            </dl>
+          </div>
+          <!-- 返り値 -->
+          <div class="fn-block">
+            <div class="fn-title">返り値</div>
+            <dl class="fn-list">
+              <div class="fn-item">
+                <dt>なし</dt>
+              </div>
+            </dl>
+          </div>
+        </div>
+  
+      </div>
+
+    </section>
+
+    <p>
+      <a href="../../" class="back-button">戻る</a>
+    </p>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <small>
+      ©2026 KR Library
+    </small>
+  </footer>
+
+  <!-- jsファイル -->
+  <script src="../../plugins/KrLib_html/kr_common.js"></script>
+  <script src="../../js/common.js"></script>
+
+  <!-- マウスカーソル -->
+  <div class="cursor"></div>
+</body>
+</html>

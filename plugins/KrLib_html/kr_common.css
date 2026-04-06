@@ -1,0 +1,102 @@
+/*
+  - kr_common.css - (HTML)
+  ver.2026/04/05
+
+  汎用的に使えるデザインやレイアウトの設定。
+*/
+@charset "utf-8";
+
+/* =============================== 
+  PCでは横並び(2つまで)、スマホでは縦並びにする
+================================ */
+.kr-layout_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px; /* 外側の余白 */
+  gap: 15px;     /* 画像間の余白 */
+  box-sizing: border-box;
+}
+.kr-layout_grid p {
+  flex: 1 1 45%;  /* widthの代わり */
+  max-width: 50%;
+  text-align: center;
+  margin: 0;
+}
+.kr-layout_grid p img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+  .kr-layout_grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .kr-layout_grid p {
+    max-width: 100%;
+  }
+}
+
+/* =============================== 
+  PCでは横並び(いくつでも)、スマホでは縦並びにする
+================================ */
+.kr-layout_grid-nolimit {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* PCでは横に並び続ける */
+}
+
+/* 各アイテムの見た目調整（任意） */
+.kr-layout_grid-nolimit p {
+  text-align: center;
+}
+
+/* スマホでは縦並び */
+@media (max-width: 768px) {
+  .kr-layout_grid-nolimit {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* =============================== 
+  画像と説明テキストを並べる
+================================ */
+.kr-layout_img-and-desc {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  line-height: 1.6; 
+}
+/* 画像のはみ出し防止 */
+.kr-layout_img-and-desc img {
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 768px) {
+  .kr-layout_img-and-desc {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =============================== 
+  中央基準用
+================================ */
+/* 画像 */
+.kr-layout_center-img {
+  display: block;
+  margin: 0 auto;
+}
+/* 動画(YouTubeなど) */
+.kr-layout_center-iframe {
+  height: 100%;       /* 横幅に縦幅を合わせる */
+  aspect-ratio: 16/9; /* アスペクト比 */
+}
