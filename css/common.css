@@ -222,6 +222,11 @@ img {
 /* =============================== 
   ▼ パネル - 小見出し(summary版)▼
 ================================ */
+.fn-toggle {
+  /* アンカー遷移時の位置調整 */
+  scroll-margin-top: calc(var(--header-h) + 10px);
+}
+
 /* デフォルトの三角を消す */
 .fn-toggle summary {
   list-style: none;
@@ -235,27 +240,9 @@ img {
 .fn-toggle .subtitle::after {
   content: none;
 }
-
-/* 開いた時 */
-.fn-toggle[open] .subtitle::after {
-  transform: rotate(90deg);
-}
-
 /* 中身の余白 */
 .fn-toggle .fn-meta {
   margin-top: 10px;
-}
-
-/* 軽い開閉アニメーション（任意） */
-.fn-toggle .fn-meta {
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: 0.2s;
-}
-
-.fn-toggle[open] .fn-meta {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* デフォルト（閉じてる） */
@@ -265,7 +252,6 @@ img {
   box-shadow:
     0 0 4px rgba(15, 163, 182, 0.4);
 }
-
 /* 開いた時（強く光る） */
 .fn-toggle[open] .subtitle::before {
   background: rgba(51,231,255,0.9);
@@ -493,7 +479,7 @@ footer {
 /* ===============================
   ▼ コードブロック ▼
 ================================ */
-pre {
+.code-block {
   margin: 12px 0;
   padding: 12px;
 
@@ -503,40 +489,32 @@ pre {
   box-shadow: 0 0 20px rgba(51,231,255,0.2);
 
   overflow: auto;
-
-  max-height: 420px; /* ← スクロール出す */
+  max-height: 420px;
 }
 
 /* コード */
-pre code {
+.code-block code {
   font-family: Consolas, "Courier New", monospace;
-
   font-size: clamp(11px, 1.4vw, 13px);
-
-  letter-spacing: 0; /* ← 無駄な広がり防止 */
+  letter-spacing: 0;
 }
 
-/* ===============================
-  ▼ コードブロック スクロールバー ▼
-================================ */
-/* 全体サイズ */
-pre::-webkit-scrollbar {
+/* スクロールバー */
+.code-block::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* 背景（トラック） */
-pre::-webkit-scrollbar-track {
-  background: rgba(95, 95, 95, 0.9);
+.code-block::-webkit-scrollbar-track {
   border-radius: 999px;
+  background: rgba(95, 95, 95, 0.9);
 
   box-shadow:
     inset 0 0 6px rgba(0,0,0,0.8),
     inset 0 0 10px rgba(51,231,255,0.08);
 }
 
-/* つまみ（スクロール部分） */
-pre::-webkit-scrollbar-thumb {
+.code-block::-webkit-scrollbar-thumb {
   border-radius: 999px;
 
   background: linear-gradient(
@@ -551,30 +529,6 @@ pre::-webkit-scrollbar-thumb {
     0 0 12px rgba(51,231,255,0.5);
 
   border: 1px solid rgba(255,255,255,0.2);
-}
-
-/* ホバー時（触った感） */
-pre::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(
-    180deg,
-    #7bfff4,
-    #33e7ff,
-    #159cad
-  );
-
-  box-shadow:
-    0 0 10px rgba(51,231,255,1),
-    0 0 20px rgba(51,231,255,0.8);
-}
-
-/* アクティブ（ドラッグ中） */
-pre::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(
-    180deg,
-    #a0fffb,
-    #5bffef,
-    #33e7ff
-  );
 }
 
 /* ===============================
@@ -722,21 +676,27 @@ pre::-webkit-scrollbar-thumb:active {
 /* プロパティ */
 .tag-prop {
   color: #d6b3ff;
-  border-color: rgba(190,120,255,0.5);
 
   box-shadow:
     0 0 8px rgba(190,120,255,0.4),
     inset 0 0 6px rgba(190,120,255,0.2);
+  text-shadow:
+    0 0 4px rgba(190,120,255,0.9),
+    0 0 10px rgba(190,120,255,0.6);
+  border-color: rgba(190,120,255,0.5);
 }
 
 /* メソッド */
 .tag-method {
   color: #a8ffcf;
-  border-color: rgba(80,255,180,0.5);
-
+  
   box-shadow:
     0 0 8px rgba(80,255,180,0.4),
-    inset 0 0 6px rgba(80,255,180,0.2);
+  inset 0 0 6px rgba(80,255,180,0.2);
+  text-shadow:
+    0 0 4px rgba(80,255,180,0.9),
+    0 0 10px rgba(80,255,180,0.6);
+  border-color: rgba(80,255,180,0.5);
 }
 
 /* 一覧 */
@@ -773,13 +733,11 @@ pre::-webkit-scrollbar-thumb:active {
   text-shadow:
     0 0 6px rgba(51,231,255,0.8),
     0 0 12px rgba(51,231,255,0.5);
-
-  border-color: rgba(51,231,255,0.7);
   box-shadow:
     0 0 10px rgba(51,231,255,0.5),
-    inset 0 0 6px rgba(51,231,255,0.25);
-
+    inset 0 0 6px rgba(51,231,255,0.25);    
   background: rgba(51,231,255,0.08);
+  border-color: rgba(51,231,255,0.7);
 }
 
 /* スマホ */
@@ -821,7 +779,9 @@ pre::-webkit-scrollbar-thumb:active {
   box-shadow:
     0 0 6px rgba(80,255,180,0.5),
     inset 0 0 4px rgba(80,255,180,0.2);
-
+  text-shadow:
+    0 0 4px rgba(80,255,180,0.9),
+    0 0 8px rgba(80,255,180,0.6);
   background: rgba(80,255,180,0.08);
 }
 
@@ -833,33 +793,46 @@ pre::-webkit-scrollbar-thumb:active {
   box-shadow:
     0 0 6px rgba(190,120,255,0.5),
     inset 0 0 4px rgba(190,120,255,0.2);
-
+  text-shadow:
+    0 0 4px rgba(190,120,255,0.9),
+    0 0 8px rgba(190,120,255,0.6);
   background: rgba(190,120,255,0.08);
 }
 
-/* static */
-.mini-tag.static {
+/* その他(staticなど) */
+.mini-tag.other {
   width: auto;
   padding: 0 5px;
 
   color: #7bf2ff;
   border-color: rgba(51,231,255,0.5);
 
-  background: rgba(51,231,255,0.08);
-
   box-shadow:
     0 0 6px rgba(51,231,255,0.5);
+  text-shadow:
+    0 0 4px rgba(51,231,255,0.9),
+    0 0 8px rgba(51,231,255,0.6);
+  background: rgba(51,231,255,0.08);
 }
 
 /* ===============================
   ▼ class - 関数詳細 ▼
 ================================ */
-/* 全体 */
 .fn-meta {
-  margin-bottom: 10px;
   display: grid;
   gap: 8px;
+  grid-template-columns: 1fr 1fr; /* 横並び */
 }
+/* 「定義」だけ横に伸ばす */
+.fn-signature {
+  grid-column: 1 / -1;
+}
+@media (max-width: 600px) {
+  .fn-meta {
+    grid-template-columns: 1fr; /* 縦並び */
+  }
+}
+
 /* subtitle ↔ fn-meta の間 */
 .fn-toggle .fn-meta {
   margin-top: 0px;
@@ -876,11 +849,21 @@ pre::-webkit-scrollbar-thumb:active {
 
 /* タイトル */
 .fn-title {
-  font-size: 14px;
+  position: relative;
+  display: inline-block;
+
+  font-size: 13px;
   font-weight: 700;
+
+  padding: 0px 8px 0px; /* ← 少し内側余白 */
   margin-bottom: 8px;
 
   color: var(--ink);
+
+  background: rgba(51,231,255,0.05);
+  border-radius: 6px;
+
+  border: 1px solid rgba(51,231,255,0.2);
 
   text-shadow:
     0 0 6px rgba(51,231,255,0.4);
@@ -894,11 +877,17 @@ pre::-webkit-scrollbar-thumb:active {
   padding: 0;
 }
 
-/* 1行 */
 .fn-item dt {
   font-family: monospace;
   font-size: 13px;
+  font-family: Consolas, "Courier New", monospace;
   color: #e6ffff;
+}
+/* 型 */
+.fn-item dt .type {
+  color: #7bf2ff;
+  text-shadow:
+    0 0 6px rgba(51,231,255,0.5);
 }
 
 .fn-item dd {
@@ -907,11 +896,41 @@ pre::-webkit-scrollbar-thumb:active {
   color: rgba(230,255,255,0.7);
 }
 
-/* 型 */
-.type {
-  color: #7bf2ff;
-  margin-right: 4px;
+/* ===============================
+  ▼ class - 関数シグネチャ ▼
+================================ */
+.fn-signature {
+  overflow-x: auto;
+}
 
-  text-shadow:
-    0 0 6px rgba(51,231,255,0.5);
+/* preリセット */
+.fn-signature pre {
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  border: none;
+  box-shadow: none;
+
+  max-height: none;
+  overflow: visible;
+}
+
+.fn-signature code {
+  display: block;
+
+  padding: 4px 8px;
+
+  border-radius: 10px; /* ← ここに移動 */
+
+  background: #05080c;
+  border: 1px solid rgba(51,231,255,0.25);
+
+  font-family: Consolas, "Courier New", monospace;
+  font-size: clamp(11px, 1.4vw, 13px);
+  line-height: 1.3;
+
+  color: #aef6ff;
+
+  white-space: nowrap;
 }

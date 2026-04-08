@@ -85,7 +85,7 @@
         <p>
           main関数で <span class="inline-code">InitDx</span> <span class="inline-code">LoopDx</span> を実行します。
         </p>
-        <pre><code class="language-cpp">
+        <pre class="code-block"><code class="language-cpp">
           int WINAPI WinMain(
             _In_     HINSTANCE hinstance,
             _In_opt_ HINSTANCE hPrevinstance,
@@ -106,11 +106,17 @@
         <details id="method-GetWindowRect" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             GetWindowRect
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                INT_RECT GetWindowRect();
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -137,11 +143,17 @@
         <details id="method-GetWindowWid" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             GetWindowWid
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                int GetWindowWid();
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -168,11 +180,17 @@
         <details id="method-GetWindowHei" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             GetWindowHei
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                int GetWindowHei();
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -199,11 +217,17 @@
         <details id="method-GetWindowSize" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             GetWindowSize
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                INT_XY GetWindowSize();
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -230,11 +254,17 @@
         <details id="method-GetFps" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             GetFps
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                int GetFps();
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -261,11 +291,17 @@
         <details id="method-ToWorldPos" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             ToWorldPos
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                DBL_XY ToWorldPos(DBL_XY pos);
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -293,11 +329,17 @@
         <details id="method-ToCameraPos" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             ToCameraPos
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                DBL_XY ToWorldPos(DBL_XY pos);
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -325,11 +367,17 @@
         <details id="method-InitDx" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             InitDx
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                ResultInt InitDx(int windowWid, int windowHei, bool isWindowMode, int fps, bool isVSync);
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -373,11 +421,17 @@
         <details id="method-LoopDx" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             LoopDx
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void LoopDx();
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -403,11 +457,17 @@
         <details id="method-Reset" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             Reset
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void Reset();
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
@@ -433,11 +493,17 @@
         <details id="method-Quit" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
-            <span class="mini-tag static">static</span>
+            <span class="mini-tag other">static</span>
             Quit
           </summary>
 
           <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void Quit();
+              </code></pre>
+            </div>
             <!-- 引数 -->
             <div class="fn-block">
               <div class="fn-title">引数</div>
