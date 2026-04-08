@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KrLibリファレンス</title>
+
+  <!--ソースコード色付け用 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+
+  <!-- cssファイル -->
+  <link rel="stylesheet" href="../../plugins/KrLib_html/kr_common.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <!-- 背景 -->
+  <div class="bg-wrap">
+    <div class="light-beams"></div>
+    <canvas id="fx"></canvas>
+  </div>
+
+  <!-- ヘッダー -->
+  <header>
+    <nav class="nav">
+      <div class="brand">KR Library</div>
+      <div class="spacer"></div> <!-- スペース -->
+      <a href="../../">戻る</a>
+    </nav>
+  </header>
+
+  <!-- サイト本体 -->
+  <main class="wrap">
+
+    <section>
+      <!-- 現在ファイル -->
+      <div class="breadcrumb">
+        <span class="bc-item">DxLib用</span>
+        <span class="bc-sep">›</span>
+        <span class="bc-item current">KR_ManagerBase</span>
+      </div>
+
+      <div class="panel">
+        <div class="title-label">
+          <span class="label">enum</span>
+          <span class="text">MngAutoExe</span>
+        </div>
+        <p>
+          管理クラスの自動実行モード。
+        </p>
+
+        <div class="enum-list">
+          <div class="enum-item">
+            <dt>Active</dt>
+            <dd>Update & Draw</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>UpdateOnly</dt>
+            <dd>Updateのみ</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>DrawOnly</dt>
+            <dd>Drawのみ</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Stop</dt>
+            <dd>実行しない</dd>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="title-label">
+          <span class="label">class</span>
+          <span class="text">ManagerInsts</span>
+        </div>
+        <p>
+          管理クラスの実体を保存する用のクラスです。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              <a href="#method-GetInst">GetInst</a>
+              <a href="#method-Push">Push</a>
+              <a href="#method-Get">Get</a>
+              <a href="#method-GetAll">GetAll</a>
+              <a href="#method-SortOrder">SortOrder</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="subtitle">使用例</p>
+        <p>
+          TODO
+        </p>
+        <pre class="code-block"><code class="language-cpp">
+          TODO
+        </code></pre>
+
+        <!-- [M] GetInst -->
+        <details id="method-GetInst" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag other">static</span>
+            GetInst
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                ManagerInsts& GetInst();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">ManagerInsts&</span></dt>
+                  <dd>クラスの実体</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] Push -->
+        <details id="method-Push" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            Push
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void Push(ManagerBase* _inst);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">ManagerBase*</span> _inst</dt>
+                  <dd>ManagerBaseを継承した管理クラスの実体</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] Get -->
+        <details id="method-Get" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            Get
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                T* Get&lt;T&gt;();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">T</span></dt>
+                  <dd>取得したい管理クラス</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">T*</span></dt>
+                  <dd>管理クラスの実体</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] GetAll -->
+        <details id="method-GetAll" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            GetAll
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                vector&lt;ManagerBase*&gt;& GetAll()
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">vector&lt;ManagerBase*&gt;&</span></dt>
+                  <dd>管理クラスの実体配列</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] SortOrder -->
+        <details id="method-SortOrder" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            SortOrder
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void SortOrder();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+      
+      <div id="class-managerbase" class="panel">
+        <div class="title-label">
+          <span class="label">class</span>
+          <span class="text">ManagerBase</span>
+        </div>
+        <p>
+          管理クラスの機能を持った基底クラスです。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              <a href="#method-SetOrder">SetOrder</a>
+              <a href="#method-GetOrder">GetOrder</a>
+              <a href="#method-SetAutoExeMode">SetAutoExeMode</a>
+              <a href="#method-BackAutoExeMode">BackAutoExeMode</a>
+              <a href="#method-GetAutoExeMode">GetAutoExeMode</a>
+              <a href="#method-IsAutoUpdate">IsAutoUpdate</a>
+              <a href="#method-IsAutoDraw">IsAutoDraw</a>
+              <a href="#method-Init">Init</a>
+              <a href="#method-Reset">Reset</a>
+              <a href="#method-Update">Update</a>
+              <a href="#method-Draw">Draw</a>
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#method-ManagerBase">ManagerBase</a>
+            </div>
+          </div>
+        </div>
+
+        <p class="subtitle">使用例</p>
+        <p>
+          TODO
+        </p>
+        <pre class="code-block"><code class="language-cpp">
+          TODO
+        </code></pre>
+
+        <!-- [C] ManagerBase -->
+        <details id="method-ManagerBase" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            ManagerBase
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                ManagerBase(int _order, MngAutoExe _mode = MngAutoExe::Active);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span> _order</dt>
+                  <dd>管理クラスの実行順(少ない方から先に動く)</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">MngAutoExe</span> _mode</dt>
+                  <dd>自動実行状態(Update関数、Draw関数)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] SetOrder -->
+        <details id="method-SetOrder" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            SetOrder
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void SetOrder(int _order);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span> _order</dt>
+                  <dd>管理クラスの実行順(少ない方から先に動く)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] GetOrder -->
+        <details id="method-GetOrder" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            GetOrder
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                int GetOrder();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span></dt>
+                  <dd>管理クラスの実行順(少ない方から先に動く)</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] SetAutoExeMode -->
+        <details id="method-SetAutoExeMode" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            SetAutoExeMode
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void SetAutoExeMode(MngAutoExe _mode);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">MngAutoExe</span> _mode</dt>
+                  <dd>自動実行状態(Update関数、Draw関数)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] BackAutoExeMode -->
+        <details id="method-BackAutoExeMode" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            BackAutoExeMode
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void BackAutoExeMode();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] GetAutoExeMode -->
+        <details id="method-GetAutoExeMode" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            GetAutoExeMode
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                MngAutoExe GetAutoExeMode();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">MngAutoExe</span></dt>
+                  <dd>自動実行状態(Update関数、Draw関数)</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] IsAutoUpdate -->
+        <details id="method-IsAutoUpdate" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            IsAutoUpdate
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                bool IsAutoUpdate();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">bool</span></dt>
+                  <dd>Update関数が自動実行ONか</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] IsAutoDraw -->
+        <details id="method-IsAutoDraw" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            IsAutoDraw
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                bool IsAutoDraw();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">bool</span></dt>
+                  <dd>Draw関数が自動実行ONか</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] Init -->
+        <details id="method-Init" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag other">virtual</span>
+            Init
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                virtual void Init() = 0;
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] Reset -->
+        <details id="method-Reset" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag other">virtual</span>
+            Reset
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                virtual void Reset() = 0;
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] Update -->
+        <details id="method-Update" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag other">virtual</span>
+            Update
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                virtual void Update() = 0;
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] Draw -->
+        <details id="method-Draw" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            <span class="mini-tag other">virtual</span>
+            Draw
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                virtual void Draw() = 0;
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <p>
+      <a href="../../" class="back-button">戻る</a>
+    </p>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <small>
+      ©2026 KR Library
+    </small>
+  </footer>
+
+  <!-- jsファイル -->
+  <script src="../../plugins/KrLib_html/kr_common.js"></script>
+  <script src="../../js/common.js"></script>
+
+  <!-- マウスカーソル -->
+  <div class="cursor"></div>
+</body>
+</html>

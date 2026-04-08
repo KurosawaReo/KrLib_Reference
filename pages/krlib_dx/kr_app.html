@@ -37,7 +37,12 @@
   <main class="wrap">
 
     <section>
-      <h2 class="h2 neon">DxLib用 > KR_App</h2>
+      <!-- 現在ファイル -->
+      <div class="breadcrumb">
+        <span class="bc-item">DxLib用</span>
+        <span class="bc-sep">›</span>
+        <span class="bc-item current">KR_App</span>
+      </div>
 
       <div class="panel">
         <div class="title-label">
@@ -48,7 +53,7 @@
           アプリケーションの初期化・ループなどの制御を行うクラスです。<br>
         </p>
 
-        <div class="class-top">
+        <div class="class-member">
 
           <!-- プロパティ -->
           <div class="class-section">
@@ -83,7 +88,17 @@
 
         <p class="subtitle">使用例</p>
         <p>
-          main関数で <span class="inline-code">InitDx</span> <span class="inline-code">LoopDx</span> を実行します。
+          main関数で
+          <span class="inline-code">InitDx</span>
+          <span class="inline-code">LoopDx</span>
+          を実行します。<br>
+          <a href="kr_managerbase.html#class-managerbase" class="inline-link">ManagerBase</a>
+          を継承した管理クラスの
+          <span class="inline-code">Init</span>
+          <span class="inline-code">Reset</span>
+          <span class="inline-code">Update</span>
+          <span class="inline-code">Draw</span>
+          関数が自動で呼ばれるようになります。
         </p>
         <pre class="code-block"><code class="language-cpp">
           int WINAPI WinMain(
