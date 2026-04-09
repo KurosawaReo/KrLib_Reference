@@ -82,7 +82,9 @@
           <span class="text">ManagerInsts</span>
         </div>
         <p>
-          管理クラスの実体を保存する用のクラスです。
+          管理クラスの実体を保存する用のクラスです。<br>
+          <a href="#class-managerbase" class="inline-link">ManagerBase</a>
+          のコンストラクタを実行すると、自動でこちらのクラスに実体が保存されます。
         </p>
 
         <div class="class-member">
@@ -112,13 +114,42 @@
           </div>
         </div>
 
-        <p class="subtitle">使用例</p>
-        <p>
-          TODO
-        </p>
-        <pre class="code-block"><code class="language-cpp">
-          TODO
-        </code></pre>
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              主に
+              <a href="#class-managerbase" class="inline-link">ManagerBase</a>
+              を継承した管理クラスを取得するのに使います。
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              //管理クラスを一斉に取得.
+              vector&lt;ManagerBase*&gt; managers = {
+                ManagerInsts::GetInst().Get&lt;MyClass1&gt;(),
+                ManagerInsts::GetInst().Get&lt;MyClass2&gt;(),
+                ManagerInsts::GetInst().Get&lt;MyClass3&gt;()
+              };
+              //全てループ.
+              for (auto& i : managers) {
+                i->SetAutoExeMode(MngAutoExe::Stop); //Update, Drawの稼働を停止する.
+              }
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
 
         <!-- [M] GetInst -->
         <details id="method-GetInst" class="fn-toggle">
@@ -150,7 +181,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">ManagerInsts&</span></dt>
-                  <dd>クラスの実体</dd>
+                  <dd>自身クラスの参照</dd>
                 </div>
               </dl>
             </div>
@@ -177,7 +208,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">ManagerBase*</span> _inst</dt>
-                  <dd>ManagerBaseを継承した管理クラスの実体</dd>
+                  <dd>ManagerBaseを継承した管理クラスのアドレス</dd>
                 </div>
               </dl>
             </div>
@@ -223,7 +254,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">T*</span></dt>
-                  <dd>管理クラスの実体</dd>
+                  <dd>管理クラスのアドレス</dd>
                 </div>
               </dl>
             </div>
@@ -259,7 +290,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">vector&lt;ManagerBase*&gt;&</span></dt>
-                  <dd>管理クラスの実体配列</dd>
+                  <dd>全ての管理クラスのアドレス</dd>
                 </div>
               </dl>
             </div>
@@ -308,7 +339,7 @@
           <span class="text">ManagerBase</span>
         </div>
         <p>
-          管理クラスの機能を持った基底クラスです。
+          管理クラスの機能を持った基底クラスです。継承して使います。
         </p>
 
         <div class="class-member">
@@ -354,13 +385,44 @@
           </div>
         </div>
 
-        <p class="subtitle">使用例</p>
-        <p>
-          TODO
-        </p>
-        <pre class="code-block"><code class="language-cpp">
-          TODO
-        </code></pre>
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              コンストラクタでorder値(管理クラスの実行順)をセットする必要があります。<br>
+              order値が少ないクラスから順に実行されます。
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              class GameManager : public ManagerBase
+              {
+              private:
+              public:
+                //コンストラクタ.
+                GameManager() : ManagerBase(0) {}
+                
+                //この4つの関数が自動で実行されるようになる.
+                void Init()   override {}
+                void Reset()  override {}
+                void Update() override {}
+                void Draw()   override {}
+              };
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
 
         <!-- [C] ManagerBase -->
         <details id="method-ManagerBase" class="fn-toggle">

@@ -86,36 +86,54 @@
           </div>
         </div>
 
-        <p class="subtitle">使用例</p>
-        <p>
-          main関数で
-          <span class="inline-code">InitDx</span>
-          <span class="inline-code">LoopDx</span>
-          を実行します。<br>
-          <a href="kr_managerbase.html#class-managerbase" class="inline-link">ManagerBase</a>
-          を継承した管理クラスの
-          <span class="inline-code">Init</span>
-          <span class="inline-code">Reset</span>
-          <span class="inline-code">Update</span>
-          <span class="inline-code">Draw</span>
-          関数が自動で呼ばれるようになります。
-        </p>
-        <pre class="code-block"><code class="language-cpp">
-          int WINAPI WinMain(
-            _In_     HINSTANCE hinstance,
-            _In_opt_ HINSTANCE hPrevinstance,
-            _In_     LPSTR     lpCmdLine,
-            _In_     int       nCmdShow
-          ){
-            //初期化.
-            ResultInt err = App::InitDx(800, 600, true, 60, false);
-            if (err.GetCode() < 0) { return -1; } //初期化エラー.
-            //ループ.
-            App::LoopDx();
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
 
-            return 0;
-          }
-        </code></pre>
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              main関数で
+              <span class="inline-code">InitDx</span>
+              <span class="inline-code">LoopDx</span>
+              を実行します。<br>
+              <a href="kr_managerbase.html#class-managerbase" class="inline-link">ManagerBase</a>
+              を継承した管理クラスの
+              <span class="inline-code">Init</span>
+              <span class="inline-code">Reset</span>
+              <span class="inline-code">Update</span>
+              <span class="inline-code">Draw</span>
+              関数が自動で呼ばれるようになります。
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              int WINAPI WinMain(
+                _In_     HINSTANCE hinstance,
+                _In_opt_ HINSTANCE hPrevinstance,
+                _In_     LPSTR     lpCmdLine,
+                _In_     int       nCmdShow
+              ){
+                //初期化.
+                ResultInt err = App::InitDx(800, 600, true, 60, false);
+                if (err.GetCode() < 0) { return -1; } //初期化エラー.
+                //ループ.
+                App::LoopDx();
+  
+                return 0;
+              }
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
 
         <!-- [M] GetWindowRect -->
         <details id="method-GetWindowRect" class="fn-toggle">
