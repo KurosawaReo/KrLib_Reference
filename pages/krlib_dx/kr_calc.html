@@ -61,18 +61,968 @@
               <span class="tag tag-method">メソッド</span>
             </div>
             <div class="class-links">
-              <a href="#method-01">TODO</a>
+              <a href="#method-HitCirCir">HitCirCir</a>
+              <a href="#method-HitBoxBox">HitBoxBox</a>
+              <a href="#method-HitBoxCir">HitBoxCir</a>
+              <a href="#method-HitLineCir">HitLineCir</a>
+              <a href="#method-HitPie">HitPie</a>
+              <a href="#method-FixPosInArea">FixPosInArea</a>
+              <a href="#method-IsOutInArea">IsOutInArea</a>
+              <a href="#method-Dist">Dist</a>
+              <a href="#method-MidPos">MidPos</a>
+              <a href="#method-ArcPos">ArcPos</a>
+              <a href="#method-FacingAng">FacingAng</a>
+              <a href="#method-AngToVector">AngToVector</a>
+              <a href="#method-BezierPoint">BezierPoint</a>
+              <a href="#method-SplinePoint">SplinePoint</a>
+              <a href="#method-PhysicsVel">PhysicsVel</a>
+              <a href="#method-AnimEase">AnimEase</a>
+              <a href="#method-AnimWave">AnimWave</a>
+              <a href="#method-RandNum">RandNum</a>
+              <a href="#method-RandNums">RandNums</a>
+              <a href="#method-GetDecimal">GetDecimal</a>
             </div>
           </div>
         </div>
 
-        <p class="subtitle">使用例</p>
-        <p>
-          TODO
-        </p>
-        <pre><code class="language-cpp">
-          TODO
-        </code></pre>
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [M] HitCirCir -->
+        <details id="method-HitCirCir" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            HitCirCir
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                bool HitCirCir(const Circle& cir1, const Circle& cir2);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">const Circle&</span> cir1</dt>
+                  <dd>円のデータ1</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">const Circle&</span> cir2</dt>
+                  <dd>円のデータ2</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">bool</span></dt>
+                  <dd>当たってるかどうか</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] HitBoxBox -->
+        <details id="method-HitBoxBox" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            HitBoxBox
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                bool HitBoxBox(const Box& box1, const Box& box2);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">const Box&</span> box1</dt>
+                  <dd>四角形のデータ1</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">const Box&</span> box2</dt>
+                  <dd>四角形のデータ2</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">bool</span></dt>
+                  <dd>当たってるかどうか</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] HitBoxCir -->
+        <details id="method-HitBoxCir" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            HitBoxCir
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                bool HitBoxCir(const Box& box, const Circle& cir);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">const Box&</span> box</dt>
+                  <dd>四角形のデータ</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">const Circle&</span> cir</dt>
+                  <dd>円のデータ</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">bool</span></dt>
+                  <dd>当たってるかどうか</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] HitLineCir -->
+        <details id="method-HitLineCir" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            HitLineCir
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                bool HitLineCir(const Line& line, const Circle& cir);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">const Line&</span> line</dt>
+                  <dd>線のデータ</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">const Circle&</span> cir</dt>
+                  <dd>円のデータ</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">bool</span></dt>
+                  <dd>当たってるかどうか</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] HitPie -->
+        <details id="method-HitPie" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            HitPie
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                bool HitPie(const Pie& pie, DBL_XY pos);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">const Pie&</span> pie</dt>
+                  <dd>扇形のデータ</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>座標</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">bool</span></dt>
+                  <dd>当たってるかどうか</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] FixPosInArea -->
+        <details id="method-FixPosInArea" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            FixPosInArea
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void FixPosInArea(DBL_XY* pos, INT_XY size, DBL_RECT rect);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY*</span> pos</dt>
+                  <dd>オブジェクトの座標(書き換え)</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">INT_XY</span> size</dt>
+                  <dd>オブジェクトのサイズ</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_RECT</span> rect</dt>
+                  <dd>移動限界の範囲</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] IsOutInArea -->
+        <details id="method-IsOutInArea" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            IsOutInArea
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                bool IsOutInArea(DBL_XY pos, INT_XY size, DBL_RECT rect, bool isCompOut);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>オブジェクトの座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">INT_XY</span> size</dt>
+                  <dd>オブジェクトのサイズ</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_RECT</span> rect</dt>
+                  <dd>移動限界の範囲</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">bool</span> isCompOut</dt>
+                  <dd>true: 完全に範囲から出たかどうか / false: 少しでも範囲から出たかどうか</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">bool</span></dt>
+                  <dd>範囲外にいるかどうか</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] Dist -->
+        <details id="method-Dist" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            Dist
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                double Dist(INT_XY pos1, INT_XY pos2);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">INT_XY</span> pos1</dt>
+                  <dd>座標1</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">INT_XY</span> pos2</dt>
+                  <dd>座標2</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">double</span></dt>
+                  <dd>距離</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                double Dist(DBL_XY pos1, DBL_XY pos2);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos1</dt>
+                  <dd>座標1</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos2</dt>
+                  <dd>座標2</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">double</span></dt>
+                  <dd>距離</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] MidPos -->
+        <details id="method-MidPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            MidPos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                DBL_XY MidPos(DBL_XY pos1, DBL_XY pos2);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos1</dt>
+                  <dd>座標1</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos2</dt>
+                  <dd>座標2</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span></dt>
+                  <dd>中央座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+        
+        <!-- [M] ArcPos -->
+        <details id="method-ArcPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            ArcPos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                DBL_XY ArcPos(DBL_XY pos, double ang, double len);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> ang</dt>
+                  <dd>角度</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> len</dt>
+                  <dd>長さ</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span></dt>
+                  <dd>posからang方向にlenずらした座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] FacingAng -->
+        <details id="method-FacingAng" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            FacingAng
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                double FacingAng(DBL_XY from, DBL_XY to);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> from</dt>
+                  <dd>始点</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> to</dt>
+                  <dd>終点</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">double</span></dt>
+                  <dd>始点から終点を見た時の角度</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] AngToVector -->
+        <details id="method-AngToVector" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            AngToVector
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                DBL_XY AngToVector(double ang);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">double</span> ang</dt>
+                  <dd>角度(Degree)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span></dt>
+                  <dd>座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] BezierPoint -->
+        <details id="method-BezierPoint" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            BezierPoint
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                DBL_XY BezierPoint(const BezierLine& bLine, double time);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">const BezierLine&</span> bLine</dt>
+                  <dd>ベジエ曲線データ</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> time</dt>
+                  <dd>タイマー(0.0 ~ 1.0)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span></dt>
+                  <dd>ベジエ曲線の一点</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] SplinePoint -->
+        <details id="method-SplinePoint" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            SplinePoint
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                DBL_XY SplinePoint(const Spline& spline, int degree, double time);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">const Spline&</span> bLine</dt>
+                  <dd>スプライン曲線データ</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> degree</dt>
+                  <dd>次元</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> time</dt>
+                  <dd>タイマー(0.0 ~ 1.0)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span></dt>
+                  <dd>スプライン曲線の一点</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] PhysicsVel -->
+        <details id="method-PhysicsVel" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            PhysicsVel
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                void PhysicsVel(DBL_XY* vel, DBL_XY maxVel, bool isGround, double gravity, double friction, double airDrag);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY*</span> vel</dt>
+                  <dd>速度(置き換え)</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> maxVel</dt>
+                  <dd>最大速度</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">bool</span> isGround</dt>
+                  <dd>着地しているかどうか</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> gravity</dt>
+                  <dd>重力</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> friction</dt>
+                  <dd>摩擦</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> airDrag</dt>
+                  <dd>空気抵抗</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] AnimEase -->
+        <details id="method-AnimEase" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            AnimEase
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                double AnimEase(EaseType type, double time);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">EaseType</span> type</dt>
+                  <dd>アニメーションの種類</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> time</dt>
+                  <dd>タイマー(0.0 ~ 1.0)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <div class="fn-item">
+                  <dt><span class="type">double</span></dt>
+                  <dd>アニメーション値(0.0 ~ 1.0)</dd>
+                </div>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] AnimWave -->
+        <details id="method-AnimWave" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            AnimWave
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                double AnimWave(WaveType type, double time);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">WaveType</span> type</dt>
+                  <dd>アニメーションウェーブの種類</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> time</dt>
+                  <dd>タイマー(0.0 ~ 1.0)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <div class="fn-item">
+                  <dt><span class="type">double</span></dt>
+                  <dd>アニメーション値(0.0 ~ 1.0)</dd>
+                </div>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] RandNum -->
+        <details id="method-RandNum" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            RandNum
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                int RandNum(int st, int ed, bool isDxRand = false);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span> st</dt>
+                  <dd>開始値</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> ed</dt>
+                  <dd>終了値</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">bool</span> isDxRand
+                    <span class="option-group">
+                      <span class="option">optional</span>
+                      <span class="value">false</span>
+                    </span>
+                  </dt>
+                  <dd>true: DxLibのランダム関数を使う / false: rand関数を使う</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <div class="fn-item">
+                  <dt><span class="type">int</span></dt>
+                  <dd>ランダムな整数値</dd>
+                </div>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] RandNums -->
+        <details id="method-RandNums" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            RandNums
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                vector&lt;int&gt; RandNums(int st, int ed, int count, bool isDxRand = false);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span> st</dt>
+                  <dd>開始値</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> ed</dt>
+                  <dd>終了値</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> count</dt>
+                  <dd>何個の整数を抽選するか(重複なし)</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">bool</span> isDxRand
+                    <span class="option-group">
+                      <span class="option">optional</span>
+                      <span class="value">false</span>
+                    </span>
+                  </dt>
+                  <dd>true: DxLibのランダム関数を使う / false: rand関数を使う</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <div class="fn-item">
+                  <dt><span class="type">vector&lt;int&gt;</span></dt>
+                  <dd>ランダムな整数値(配列)</dd>
+                </div>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] GetDecimal -->
+        <details id="method-GetDecimal" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            GetDecimal
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                double GetDecimal(double num);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">double</span> num</dt>
+                  <dd>実数</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <div class="fn-item">
+                  <dt><span class="type">double</span></dt>
+                  <dd>小数のみ</dd>
+                </div>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
       </div>
 
     </section>

@@ -408,7 +408,7 @@
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                ResultInt InitDx(int windowWid, int windowHei, bool isWindowMode, int fps, bool isVSync);
+                ResultInt InitDx(int windowWid, int windowHei, bool isWindowMode, int fps, bool isVSync = true);
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -432,7 +432,13 @@
                   <dd>Update / Draw処理のフレームレート</dd>
                 </div>
                 <div class="fn-item">
-                  <dt><span class="type">bool</span> isVSync</dt>
+                  <dt>
+                    <span class="type">bool</span> isVSync
+                    <span class="option-group">
+                      <span class="option">optional</span>
+                      <span class="value">true</span>
+                    </span>
+                  </dt>
                   <dd>垂直同期</dd>
                 </div>
               </dl>

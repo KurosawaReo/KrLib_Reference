@@ -921,7 +921,7 @@ footer {
   /* アンカー遷移時の位置調整 */
   scroll-margin-top: calc(var(--header-h) + 10px);
 }
-/* ▼ fn-toggle同士の間だけ詰める */
+/* fn-toggle同士の間だけ詰める */
 .fn-toggle + .fn-toggle {
   margin-top: -6px;
 }
@@ -948,7 +948,7 @@ footer {
 }
 
 /* デフォルト（閉じてる） */
-.panel .fn-toggle .subtitle::before {
+.fn-toggle .subtitle::before {
   background: rgba(15, 163, 182, 0.4);
 
   box-shadow:
@@ -1036,17 +1036,55 @@ footer {
   font-family: var(--font-program);
   color: #e6ffff;
 }
+.fn-item dd {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(230,255,255,0.7);
+}
 /* 型 */
-.fn-item dt .type {
+.fn-item .type {
   color: #7bf2ff;
   text-shadow:
     0 0 6px rgba(51,231,255,0.5);
 }
 
-.fn-item dd {
-  margin: 0;
+/* グループ */
+.option-group {
+  margin-left: 6px;
+  display: inline;
+}
+/* optionalタグ */
+.fn-item .option-group .option {
+  padding: 1px 4px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  border-radius: 6px;
+
+  color: #ffe7a3; /* 少し淡い黄色 */
+  border: 1px solid rgba(255,220,120,0.5);
+
+  background: rgba(255,220,120,0.08);
+
+  text-shadow:
+    0 0 4px rgba(255,220,120,0.6);
+}
+/* デフォルト値 */
+.fn-item .option-group .value {
+  margin-left: 0px;
+
   font-size: 12px;
-  color: rgba(230,255,255,0.7);
+  color: rgba(230,255,255,0.5);
+
+  font-family: var(--font-program);
+}
+/* スマホ */
+@media (max-width: 600px) {
+  .option-group {
+    margin-left: 0px;
+    display: block; /* ← まとめて改行 */
+  }
 }
 
 .fn-signature {
