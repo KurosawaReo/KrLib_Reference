@@ -206,18 +206,7 @@ img {
 .panel .title-label .text {
   position: relative;
 }
-/* ▼ 下ライン（titleと同じ） */
-.panel .title-label .text::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 2px;
 
-  width: 100%;
-  height: 1px;
-
-  background: rgba(51,231,255,0.35);
-}
 .panel .title-label .label {
   display: inline-block;
   margin-right: 8px;
