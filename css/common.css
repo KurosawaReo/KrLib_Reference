@@ -94,17 +94,22 @@ img {
   transform: translateY(-1px); /* 位置調整 */
 }
 
+/* 型 */
+.type {
+  color: #7bf2ff;
+  text-shadow:
+    0 0 6px rgba(51,231,255,0.5);
+}
+
 /* インラインリンク(説明文用) */
+/* typeクラスと同じ色 */
 .inline-link {
   position: relative;
   text-decoration: none;
-
-  color: #7bf2ff; /* 少し明るめシアン（既存と統一） */
-
+  color: #7bf2ff;
   transition: 0.2s ease;
 }
-
-/* 下線（うっすら） */
+/* 下線 */
 .inline-link::after {
   content: "";
   position: absolute;
@@ -1041,50 +1046,48 @@ footer {
   font-size: 12px;
   color: rgba(230,255,255,0.7);
 }
-/* 型 */
-.fn-item .type {
-  color: #7bf2ff;
-  text-shadow:
-    0 0 6px rgba(51,231,255,0.5);
-}
 
-/* グループ */
 .option-group {
-  margin-left: 6px;
-  display: inline;
-}
-/* optionalタグ */
-.fn-item .option-group .option {
-  padding: 1px 4px;
+  margin-left: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 
-  font-size: 10px;
-  font-weight: 700;
+  padding: 2px 6px;
 
   border-radius: 6px;
 
-  color: #ffe7a3; /* 少し淡い黄色 */
-  border: 1px solid rgba(255,220,120,0.5);
+  background: rgba(180, 240, 255, 0.05);
+  border: 1px solid rgba(180, 240, 255, 0.25);
 
-  background: rgba(255,220,120,0.08);
-
-  text-shadow:
-    0 0 4px rgba(255,220,120,0.6);
+  box-shadow:
+    0 0 6px rgba(180, 240, 255, 0.15);
 }
-/* デフォルト値 */
-.fn-item .option-group .value {
-  margin-left: 0px;
+/* ラベル・値 共通 */
+.option-group .label,
+.option-group .value {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
 
-  font-size: 12px;
-  color: rgba(230,255,255,0.5);
-
-  font-family: var(--font-program);
 }
-/* スマホ */
-@media (max-width: 600px) {
-  .option-group {
-    margin-left: 0px;
-    display: block; /* ← まとめて改行 */
-  }
+/* 区切り線 */
+.option-group .value::before {
+  content: "";
+
+  width: 1px;
+  height: 12px;
+
+  margin-right: 6px;
+
+  background: rgba(180, 240, 255, 0.4);
+
+  box-shadow:
+    0 0 4px rgba(180, 240, 255, 0.6);
+
+  display: inline-block;
+  vertical-align: middle; /* ← baseline崩し */
 }
 
 .fn-signature {

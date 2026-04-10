@@ -98,11 +98,34 @@
 
           <div class="fn-meta no-grid">
             <p>
-              TODO
+              ランダムな方向に移動する。
             </p>
             <pre class="code-block"><code class="language-cpp">
-              TODO
+              //ランダムな角度(0～360度)
+              double ang = Calc::RandNum(0, 360, true);
+              //角度 → ベクトルに変換.
+              DBL_XY dir = Calc::AngToVector(ang);
+              //移動.
+              pos += dir * 5.0;
             </code></pre>
+            <p>
+              座標計算系。
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              //2つの座標の中点を取得.
+              DBL_XY center   = Calc::MidPos(posA, posB);
+              //距離を取得.
+              double distance = Calc::Dist(posA, posB);
+            </code></pre>
+            <p>
+              当たり判定。
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              if (Calc::HitCirCir(player, enemy)) {
+                //当たった.
+              }
+            </code></pre>
+
           </div>
         </details>
 
@@ -905,7 +928,7 @@
                   <dt>
                     <span class="type">bool</span> isDxRand
                     <span class="option-group">
-                      <span class="option">optional</span>
+                      <span class="label">初期値</span>
                       <span class="value">false</span>
                     </span>
                   </dt>
@@ -962,7 +985,7 @@
                   <dt>
                     <span class="type">bool</span> isDxRand
                     <span class="option-group">
-                      <span class="option">optional</span>
+                      <span class="label">初期値</span>
                       <span class="value">false</span>
                     </span>
                   </dt>

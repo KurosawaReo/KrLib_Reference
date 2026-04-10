@@ -44,13 +44,14 @@
         <span class="bc-item current">KR_ManagerBase</span>
       </div>
 
-      <div class="panel">
+      <div id="enum-MngAutoExe" class="panel">
         <div class="title-label">
           <span class="label">enum</span>
           <span class="text">MngAutoExe</span>
         </div>
         <p>
           管理クラスの自動実行モード。
+          <span class="inline-code">Update</span> <span class="inline-code">Draw</span> を自動で動かすかどうかの設定。
         </p>
 
         <div class="enum-list">
@@ -83,7 +84,7 @@
         </div>
         <p>
           管理クラスの実体を保存する用のクラスです。<br>
-          <a href="#class-managerbase" class="inline-link">ManagerBase</a>
+          <a href="#class-ManagerBase" class="inline-link">ManagerBase</a>
           のコンストラクタを実行すると、自動でこちらのクラスに実体が保存されます。
         </p>
 
@@ -128,7 +129,7 @@
           <div class="fn-meta no-grid">
             <p>
               主に
-              <a href="#class-managerbase" class="inline-link">ManagerBase</a>
+              <a href="#class-ManagerBase" class="inline-link">ManagerBase</a>
               を継承した管理クラスを取得するのに使います。
             </p>
             <pre class="code-block"><code class="language-cpp">
@@ -333,7 +334,7 @@
         </details>
       </div>
       
-      <div id="class-managerbase" class="panel">
+      <div id="class-ManagerBase" class="panel">
         <div class="title-label">
           <span class="label">class</span>
           <span class="text">ManagerBase</span>
@@ -448,9 +449,9 @@
                 </div>
                 <div class="fn-item">
                   <dt>
-                    <span class="type">MngAutoExe</span> _mode
+                    <span class="type"><a class="inline-link" href="#enum-MngAutoExe">MngAutoExe</a></span> _mode
                     <span class="option-group">
-                      <span class="option">optional</span>
+                      <span class="label">初期値</span>
                       <span class="value">MngAutoExe::Active</span>
                     </span>
                   </dt>
@@ -561,7 +562,7 @@
               <div class="fn-title">引数</div>
               <dl class="fn-list">
                 <div class="fn-item">
-                  <dt><span class="type">MngAutoExe</span> _mode</dt>
+                  <dt><span class="type"><a class="inline-link" href="#enum-MngAutoExe">MngAutoExe</a></span> _mode</dt>
                   <dd>自動実行状態(Update関数、Draw関数)</dd>
                 </div>
               </dl>
@@ -641,7 +642,7 @@
               <div class="fn-title">返り値</div>
               <dl class="fn-list">
                 <div class="fn-item">
-                  <dt><span class="type">MngAutoExe</span></dt>
+                  <dt><span class="type"><a class="inline-link" href="#enum-MngAutoExe">MngAutoExe</a></span></dt>
                   <dd>自動実行状態(Update関数、Draw関数)</dd>
                 </div>
               </dl>
