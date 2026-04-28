@@ -44,7 +44,7 @@
         <span class="bc-item current">KR_App</span>
       </div>
 
-      <div class="panel">
+      <div id="class-App" class="panel">
         <div class="title-label">
           <span class="label">class</span>
           <span class="text">App</span>
@@ -118,12 +118,24 @@
                 _In_     LPSTR     lpCmdLine,
                 _In_     int       nCmdShow
               ){
-                //初期化.
-                ResultInt err = App::InitDx(800, 600, true, 60, false);
-                if (err.GetCode() < 0) { return -1; } //初期化エラー.
-                //ループ.
-                App::LoopDx();
-  
+                try {
+                  //初期化処理.
+                  App::InitDx(WINDOW_WID, WINDOW_HEI, IS_WINDOW_MODE, FPS, false);
+                }
+                catch (const ErrorMsg& err) {
+                  //エラーメッセージ.
+                  Debug::Log(_T("InitDx"), err.GetResult());
+                }
+
+                try {
+                  //ループ処理.
+                  App::LoopDx();
+                }
+                catch (const ErrorMsg& err) {
+                  //エラーメッセージ.
+                  Debug::Log(_T("LoopDx"), err.GetResult());
+                }
+
                 return 0;
               }
             </code></pre>
@@ -142,12 +154,14 @@
             <span class="mini-tag other">static</span>
             GetWindowRect
           </summary>
-
+          <div class="fn-desc">
+            ウィンドウのサイズを四角形で取得します。(カメラ座標)
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                INT_RECT GetWindowRect();
+                static INT_RECT GetWindowRect();
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -179,12 +193,14 @@
             <span class="mini-tag other">static</span>
             GetWindowWid
           </summary>
-
+          <div class="fn-desc">
+            ウィンドウの横幅を取得します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                int GetWindowWid();
+                static int GetWindowWid();
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -216,12 +232,14 @@
             <span class="mini-tag other">static</span>
             GetWindowHei
           </summary>
-
+          <div class="fn-desc">
+            ウィンドウの縦幅を取得します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                int GetWindowHei();
+                static int GetWindowHei();
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -253,12 +271,14 @@
             <span class="mini-tag other">static</span>
             GetWindowSize
           </summary>
-
+          <div class="fn-desc">
+            ウィンドウのサイズを取得します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                INT_XY GetWindowSize();
+                static INT_XY GetWindowSize();
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -290,12 +310,14 @@
             <span class="mini-tag other">static</span>
             GetFps
           </summary>
-
+          <div class="fn-desc">
+            フレームレート数を取得します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                int GetFps();
+                static int GetFps();
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -327,12 +349,14 @@
             <span class="mini-tag other">static</span>
             ToWorldPos
           </summary>
-
+          <div class="fn-desc">
+            ワールド座標に変換します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                DBL_XY ToWorldPos(DBL_XY pos);
+                static DBL_XY ToWorldPos(DBL_XY pos);
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -365,12 +389,14 @@
             <span class="mini-tag other">static</span>
             ToCameraPos
           </summary>
-
+          <div class="fn-desc">
+            カメラ座標に変換します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                DBL_XY ToWorldPos(DBL_XY pos);
+                static DBL_XY ToWorldPos(DBL_XY pos);
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -403,12 +429,16 @@
             <span class="mini-tag other">static</span>
             InitDx
           </summary>
-
+          <div class="fn-desc">
+            DXライブラリの初期化処理を行います。<br>
+            <a href="kr_managerinsts.html#class-ManagerInsts" class="inline-link">ManagerInsts</a>
+            で作成した管理クラスの初期化処理も行います。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                ResultInt InitDx(int windowWid, int windowHei, bool isWindowMode, int fps, bool isVSync = true);
+                static ResultInt InitDx(int windowWid, int windowHei, bool isWindowMode, int fps, bool isVSync = true);
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -463,12 +493,16 @@
             <span class="mini-tag other">static</span>
             LoopDx
           </summary>
-
+          <div class="fn-desc">
+            DXライブラリのループ処理を行います。<br>
+            <a href="kr_managerinsts.html#class-ManagerInsts" class="inline-link">ManagerInsts</a>
+            で作成した管理クラスのループ処理も行います。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                void LoopDx();
+                static void LoopDx();
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -499,12 +533,15 @@
             <span class="mini-tag other">static</span>
             Reset
           </summary>
-
+          <div class="fn-desc">
+            <a href="kr_managerinsts.html#class-ManagerInsts" class="inline-link">ManagerInsts</a>
+            で作成した管理クラスのリセット処理を行います。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                void Reset();
+                static void Reset();
               </code></pre>
             </div>
             <!-- 引数 -->
@@ -535,12 +572,14 @@
             <span class="mini-tag other">static</span>
             Quit
           </summary>
-
+          <div class="fn-desc">
+            次のフレームでループ処理から抜け出し、アプリを終了します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                void Quit();
+                static void Quit();
               </code></pre>
             </div>
             <!-- 引数 -->

@@ -44,6 +44,55 @@
         <span class="bc-item current">KR_Calc</span>
       </div>
 
+      <div id="enum-EaseType" class="panel">
+        <div class="title-label">
+          <span class="label">enum</span>
+          <span class="text">EaseType</span>
+        </div>
+        <p>
+          イージングの種類。
+        </p>
+
+        <div class="enum-list">
+          <div class="enum-item">
+            <dt>InQuad</dt>
+            <dd>徐々に加速</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>OutQuad</dt>
+            <dd>徐々に減速</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>InOutQuad</dt>
+            <dd>加速して減速</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>OutInQuad</dt>
+            <dd>減速して加速</dd>
+          </div>
+        </div>
+      </div>
+
+      <div id="enum-WaveType" class="panel">
+        <div class="title-label">
+          <span class="label">enum</span>
+          <span class="text">WaveType</span>
+        </div>
+        <p>
+          ループイージングの種類。
+        </p>
+
+        <div class="enum-list">
+          <div class="enum-item">
+            <dt>CosLoop</dt>
+            <dd>cos波のループ</dd>
+          </div>
+        </div>
+      </div>
+
       <div class="panel">
         <div class="title-label">
           <span class="label">namespace</span>
@@ -140,7 +189,9 @@
             <span class="mini-tag method">M</span>
             HitCirCir
           </summary>
-
+          <div class="fn-desc">
+            円と円が当たっているか判定します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -181,7 +232,9 @@
             <span class="mini-tag method">M</span>
             HitBoxBox
           </summary>
-
+          <div class="fn-desc">
+            四角形と四角形が当たっているか判定します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -222,7 +275,9 @@
             <span class="mini-tag method">M</span>
             HitBoxCir
           </summary>
-
+          <div class="fn-desc">
+            四角形と円が当たっているか判定します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -263,7 +318,9 @@
             <span class="mini-tag method">M</span>
             HitLineCir
           </summary>
-
+          <div class="fn-desc">
+            線と円が当たっているか判定します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -304,7 +361,9 @@
             <span class="mini-tag method">M</span>
             HitPie
           </summary>
-
+          <div class="fn-desc">
+            扇形に入っているか判定します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -345,7 +404,9 @@
             <span class="mini-tag method">M</span>
             FixPosInArea
           </summary>
-
+          <div class="fn-desc">
+            入力した座標が、指定した範囲より外に出た場合、範囲内に補正します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -389,7 +450,9 @@
             <span class="mini-tag method">M</span>
             IsOutInArea
           </summary>
-
+          <div class="fn-desc">
+            入力した座標が、指定した範囲より外に出ているかを判定します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -438,7 +501,9 @@
             <span class="mini-tag method">M</span>
             Dist
           </summary>
-
+          <div class="fn-desc">
+            2つの座標の距離を計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -512,7 +577,9 @@
             <span class="mini-tag method">M</span>
             MidPos
           </summary>
-
+          <div class="fn-desc">
+            2つの座標の中点座標を計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -553,7 +620,9 @@
             <span class="mini-tag method">M</span>
             ArcPos
           </summary>
-
+          <div class="fn-desc">
+            角度と長さから円周上の座標を計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -598,7 +667,9 @@
             <span class="mini-tag method">M</span>
             FacingAng
           </summary>
-
+          <div class="fn-desc">
+            始点座標から対象座標への方向を計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -639,7 +710,9 @@
             <span class="mini-tag method">M</span>
             AngToVector
           </summary>
-
+          <div class="fn-desc">
+            角度(Degree)をベクトルに変換します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -676,7 +749,9 @@
             <span class="mini-tag method">M</span>
             BezierPoint
           </summary>
-
+          <div class="fn-desc">
+            ベジエ曲線から一点の座標を計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -717,7 +792,9 @@
             <span class="mini-tag method">M</span>
             SplinePoint
           </summary>
-
+          <div class="fn-desc">
+            スプライン曲線から一点の座標を計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -762,7 +839,9 @@
             <span class="mini-tag method">M</span>
             PhysicsVel
           </summary>
-
+          <div class="fn-desc">
+            速度の減衰を物理法則で計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -818,7 +897,9 @@
             <span class="mini-tag method">M</span>
             AnimEase
           </summary>
-
+          <div class="fn-desc">
+            アニメーション用のイージング値(0.0~1.0)を計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -861,7 +942,9 @@
             <span class="mini-tag method">M</span>
             AnimWave
           </summary>
-
+          <div class="fn-desc">
+            アニメーション用のループイージング値(0.0~1.0)を計算します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -904,7 +987,9 @@
             <span class="mini-tag method">M</span>
             RandNum
           </summary>
-
+          <div class="fn-desc">
+            指定した範囲からランダムで1つの数字を選びます。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -957,7 +1042,9 @@
             <span class="mini-tag method">M</span>
             RandNums
           </summary>
-
+          <div class="fn-desc">
+            指定した範囲からランダムで複数の数字を選びます。(重複なし)
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -1014,7 +1101,9 @@
             <span class="mini-tag method">M</span>
             GetDecimal
           </summary>
-
+          <div class="fn-desc">
+            数値の小数部のみを取得します。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
