@@ -8,9 +8,6 @@
   <!--ソースコード色付け用 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 
   <!-- cssファイル -->
   <link rel="stylesheet" href="../../plugins/KrLib_html/kr_common.css">
@@ -51,7 +48,8 @@
         </div>
         <p>
           <a href="kr_managerbase.html#class-ManagerBase" class="inline-link">ManagerBase</a>
-          の派生クラスを、生成・管理します。
+          の派生クラスを、生成・管理します。<br>
+          生成した管理クラスは、自動で関数が実行されます。
         </p>
 
         <div class="class-member">
@@ -72,11 +70,10 @@
               <span class="tag tag-method">メソッド</span>
             </div>
             <div class="class-links">
-              <a href="#method-GetInst">GetInst</a>
-              <a href="#method-NewManager">NewManager</a>
-              <a href="#method-Get">Get</a>
-              <a href="#method-GetAll">GetAll</a>
-              <a href="#method-SortOrder">SortOrder</a>
+              <a href="#class-ManagerInsts-NewManager">NewManager</a>
+              <a href="#class-ManagerInsts-Get">Get</a>
+              <a href="#class-ManagerInsts-GetAll">GetAll</a>
+              <a href="#class-ManagerInsts-SortOrder">SortOrder</a>
             </div>
           </div>
         </div>
@@ -100,20 +97,34 @@
               <a href="kr_managerbase.html#class-ManagerBase" class="inline-link">ManagerBase</a>
               の派生クラスを生成する必要があります。
             </p>
+            <pre class="code-block"><code class="language-cpp">
+              int WINAPI WinMain(
+                /* 略 */
+              ){
+                //Managerクラス実体生成.
+                //引数で実行順(order値)を入力する.
+                ManagerInsts::NewManager&lt;InputMng&gt;(0);
+                ManagerInsts::NewManager&lt;SoundMng&gt;(1);
+                ManagerInsts::NewManager&lt;SceneMng&gt;(2);
+
+                ManagerInsts::NewManager&lt;MyClass1&gt;(3);
+                ManagerInsts::NewManager&lt;MyClass2&gt;(4);
+                ManagerInsts::NewManager&lt;MyClass3&gt;(5);
+
+                /* [略] App::InitDx, App::LoopDx をここに記述 */
+
+                return 0;
+              }
+            </code></pre>
             <p>
-              生成したクラスは、関数が自動で実行されます。<br>
-              実行の順番は、
-              <a href="kr_managerbase.html#class-ManagerBase" class="inline-link">ManagerBase</a>
-              の
-              <span class="inline-code">order値</span>
-              が少ない順から実行されます。
+              以下のように、複数の管理クラスを取得して一斉に処理することも可能です。
             </p>
             <pre class="code-block"><code class="language-cpp">
               //管理クラスを一斉に取得.
               vector&lt;ManagerBase*&gt; managers = {
-                ManagerInsts::GetInst().Get&lt;MyClass1&gt;(),
-                ManagerInsts::GetInst().Get&lt;MyClass2&gt;(),
-                ManagerInsts::GetInst().Get&lt;MyClass3&gt;()
+                ManagerInsts::Get&lt;MyClass1&gt;(),
+                ManagerInsts::Get&lt;MyClass2&gt;(),
+                ManagerInsts::Get&lt;MyClass3&gt;()
               };
               //全てループ.
               for (auto& i : managers) {
@@ -128,47 +139,8 @@
           クリック / タップで開く
         </div>
 
-        <!-- [M] GetInst -->
-        <details id="method-GetInst" class="fn-toggle">
-          <summary class="subtitle">
-            <span class="mini-tag method">M</span>
-            <span class="mini-tag other">static</span>
-            GetInst
-          </summary>
-          <div class="fn-desc">
-            ManagerInstsクラスの実体を取得します。
-          </div>
-          <div class="fn-meta">
-            <!-- 定義 -->
-            <div class="fn-signature">
-              <pre><code class="language-cpp">
-                static ManagerInsts& GetInst();
-              </code></pre>
-            </div>
-            <!-- 引数 -->
-            <div class="fn-block">
-              <div class="fn-title">引数</div>
-              <dl class="fn-list">
-                <div class="fn-item">
-                  <dt>なし</dt>
-                </div>
-              </dl>
-            </div>
-            <!-- 返り値 -->
-            <div class="fn-block">
-              <div class="fn-title">返り値</div>
-              <dl class="fn-list">
-                <div class="fn-item">
-                  <dt><span class="type"><a href="#class-ManagerInsts" class="inline-link">ManagerInsts</a>&</span></dt>
-                  <dd>自身クラスの参照</dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-        </details>
-
         <!-- [M] NewManager -->
-        <details id="method-NewManager" class="fn-toggle">
+        <details id="class-ManagerInsts-NewManager" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -214,7 +186,7 @@
         </details>
 
         <!-- [M] Get -->
-        <details id="method-Get" class="fn-toggle">
+        <details id="class-ManagerInsts-Get" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -254,7 +226,7 @@
         </details>
 
         <!-- [M] GetAll -->
-        <details id="method-GetAll" class="fn-toggle">
+        <details id="class-ManagerInsts-GetAll" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -297,9 +269,10 @@
         </details>
 
         <!-- [M] SortOrder -->
-        <details id="method-SortOrder" class="fn-toggle">
+        <details id="class-ManagerInsts-SortOrder" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
+            <span class="mini-tag other">static</span>
             SortOrder
           </summary>
 
@@ -307,7 +280,7 @@
             <!-- 定義 -->
             <div class="fn-signature">
               <pre><code class="language-cpp">
-                void SortOrder();
+                static void SortOrder();
               </code></pre>
             </div>
             <!-- 引数 -->

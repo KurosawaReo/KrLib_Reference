@@ -8,9 +8,6 @@
   <!--ソースコード色付け用 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 
   <!-- cssファイル -->
   <link rel="stylesheet" href="../../plugins/KrLib_html/kr_common.css">
@@ -56,6 +53,7 @@
           を自動で動かすか動かさないかを設定するのに使います。
         </p>
 
+        <!-- 列挙値の種類 -->
         <div class="enum-list">
           <div class="enum-item">
             <dt>Active</dt>
@@ -93,7 +91,9 @@
           <span class="inline-code">Reset</span>
           <span class="inline-code">Update</span>
           <span class="inline-code">Draw</span>
-          が自動で実行されます。
+          が自動で実行されます。<br>
+          実行される順番は、<span class="inline-code">order値</span>
+          が少ない順で実行されます。
         </p>
 
         <div class="class-member">
@@ -114,16 +114,16 @@
               <span class="tag tag-method">メソッド</span>
             </div>
             <div class="class-links">
-              <a href="#method-GetOrder">GetOrder</a>
-              <a href="#method-SetAutoExeMode">SetAutoExeMode</a>
-              <a href="#method-BackAutoExeMode">BackAutoExeMode</a>
-              <a href="#method-GetAutoExeMode">GetAutoExeMode</a>
-              <a href="#method-IsAutoUpdate">IsAutoUpdate</a>
-              <a href="#method-IsAutoDraw">IsAutoDraw</a>
-              <a href="#method-Init">Init</a>
-              <a href="#method-Reset">Reset</a>
-              <a href="#method-Update">Update</a>
-              <a href="#method-Draw">Draw</a>
+              <a href="#class-ManagerBase-GetOrder">GetOrder</a>
+              <a href="#class-ManagerBase-SetAutoExeMode">SetAutoExeMode</a>
+              <a href="#class-ManagerBase-BackAutoExeMode">BackAutoExeMode</a>
+              <a href="#class-ManagerBase-GetAutoExeMode">GetAutoExeMode</a>
+              <a href="#class-ManagerBase-IsAutoUpdate">IsAutoUpdate</a>
+              <a href="#class-ManagerBase-IsAutoDraw">IsAutoDraw</a>
+              <a href="#class-ManagerBase-Init">Init</a>
+              <a href="#class-ManagerBase-Reset">Reset</a>
+              <a href="#class-ManagerBase-Update">Update</a>
+              <a href="#class-ManagerBase-Draw">Draw</a>
             </div>
           </div>
 
@@ -133,7 +133,7 @@
               <span class="tag tag-constructor">コンストラクタ</span>
             </div>
             <div class="class-links">
-              <a href="#method-ManagerBase">ManagerBase</a>
+              <a href="#class-ManagerBase-ManagerBase">ManagerBase</a>
             </div>
           </div>
         </div>
@@ -156,7 +156,9 @@
               をセットする必要があります。<br>
               以下のようにすると
               <a href="kr_managerinsts.html#class-ManagerInsts" class="inline-link">ManagerInsts::NewManager()</a>
-              からでもorder値を設定できるようになるのでおすすめです。
+              からでも
+              <span class="inline-code">order値</span>
+              を設定できるようになるのでおすすめです。
             </p>
             <pre class="code-block"><code class="language-cpp">
               class GameManager : public ManagerBase
@@ -182,7 +184,7 @@
         </div>
 
         <!-- [C] ManagerBase -->
-        <details id="method-ManagerBase" class="fn-toggle">
+        <details id="class-ManagerBase-ManagerBase" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag constructor">C</span>
             ManagerBase
@@ -201,7 +203,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">int</span> _order</dt>
-                  <dd>管理クラスの実行順(少ない方から先に動く)</dd>
+                  <dd>管理クラスの実行順</dd>
                 </div>
                 <div class="fn-item">
                   <dt>
@@ -211,7 +213,7 @@
                       <span class="value">MngAutoExe::Active</span>
                     </span>
                   </dt>
-                  <dd>自動実行状態(Update関数、Draw関数)</dd>
+                  <dd>自動実行モード</dd>
                 </div>
               </dl>
             </div>
@@ -228,7 +230,7 @@
         </details>
 
         <!-- [M] GetOrder -->
-        <details id="method-GetOrder" class="fn-toggle">
+        <details id="class-ManagerBase-GetOrder" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             GetOrder
@@ -258,7 +260,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">int</span></dt>
-                  <dd>管理クラスの実行順(少ない方から先に動く)</dd>
+                  <dd>管理クラスの実行順</dd>
                 </div>
               </dl>
             </div>
@@ -266,7 +268,7 @@
         </details>
 
         <!-- [M] SetAutoExeMode -->
-        <details id="method-SetAutoExeMode" class="fn-toggle">
+        <details id="class-ManagerBase-SetAutoExeMode" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             SetAutoExeMode
@@ -287,7 +289,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type"><a href="#enum-MngAutoExe" class="inline-link">MngAutoExe</a></span> _mode</dt>
-                  <dd>自動実行状態(Update関数、Draw関数)</dd>
+                  <dd>自動実行モード</dd>
                 </div>
               </dl>
             </div>
@@ -304,7 +306,7 @@
         </details>
 
         <!-- [M] BackAutoExeMode -->
-        <details id="method-BackAutoExeMode" class="fn-toggle">
+        <details id="class-ManagerBase-BackAutoExeMode" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             BackAutoExeMode
@@ -341,7 +343,7 @@
         </details>
 
         <!-- [M] GetAutoExeMode -->
-        <details id="method-GetAutoExeMode" class="fn-toggle">
+        <details id="class-ManagerBase-GetAutoExeMode" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             GetAutoExeMode
@@ -371,7 +373,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type"><a href="#enum-MngAutoExe" class="inline-link">MngAutoExe</a></span></dt>
-                  <dd>自動実行状態(Update関数、Draw関数)</dd>
+                  <dd>自動実行モード</dd>
                 </div>
               </dl>
             </div>
@@ -379,13 +381,13 @@
         </details>
 
         <!-- [M] IsAutoUpdate -->
-        <details id="method-IsAutoUpdate" class="fn-toggle">
+        <details id="class-ManagerBase-IsAutoUpdate" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             IsAutoUpdate
           </summary>
           <div class="fn-desc">
-            Update関数が自動実行ONになっているかを判定します。
+            Update関数の自動実行がONになっているかを判定します。
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -409,7 +411,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">bool</span></dt>
-                  <dd>Update関数が自動実行ONか</dd>
+                  <dd>自動実行がONかどうか</dd>
                 </div>
               </dl>
             </div>
@@ -417,13 +419,13 @@
         </details>
 
         <!-- [M] IsAutoDraw -->
-        <details id="method-IsAutoDraw" class="fn-toggle">
+        <details id="class-ManagerBase-IsAutoDraw" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             IsAutoDraw
           </summary>
           <div class="fn-desc">
-            Draw関数が自動実行ONになっているかを判定します。
+            Draw関数の自動実行がONになっているかを判定します。
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -447,7 +449,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">bool</span></dt>
-                  <dd>Draw関数が自動実行ONか</dd>
+                  <dd>自動実行がONかどうか</dd>
                 </div>
               </dl>
             </div>
@@ -455,7 +457,7 @@
         </details>
 
         <!-- [M] Init -->
-        <details id="method-Init" class="fn-toggle">
+        <details id="class-ManagerBase-Init" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">virtual</span>
@@ -493,7 +495,7 @@
         </details>
 
         <!-- [M] Reset -->
-        <details id="method-Reset" class="fn-toggle">
+        <details id="class-ManagerBase-Reset" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">virtual</span>
@@ -531,7 +533,7 @@
         </details>
 
         <!-- [M] Update -->
-        <details id="method-Update" class="fn-toggle">
+        <details id="class-ManagerBase-Update" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">virtual</span>
@@ -569,7 +571,7 @@
         </details>
 
         <!-- [M] Draw -->
-        <details id="method-Draw" class="fn-toggle">
+        <details id="class-ManagerBase-Draw" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">virtual</span>

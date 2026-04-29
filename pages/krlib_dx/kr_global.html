@@ -1,0 +1,2758 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KrLibリファレンス</title>
+
+  <!--ソースコード色付け用 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- cssファイル -->
+  <link rel="stylesheet" href="../../plugins/KrLib_html/kr_common.css">
+  <link rel="stylesheet" href="../../css/common.css">
+</head>
+<body>
+
+  <!-- 背景 -->
+  <div class="bg-wrap">
+    <div class="light-beams"></div>
+    <canvas id="fx"></canvas>
+  </div>
+
+  <!-- ヘッダー -->
+  <header>
+    <nav class="nav">
+      <div class="brand">KR Library</div>
+      <div class="spacer"></div> <!-- スペース -->
+      <a href="../../">戻る</a>
+    </nav>
+  </header>
+
+  <!-- サイト本体 -->
+  <main class="wrap">
+
+    <section>
+      <!-- 現在ファイル -->
+      <div class="breadcrumb">
+        <span class="bc-item">DxLib用</span>
+        <span class="bc-sep">›</span>
+        <span class="bc-item current">KR_Global</span>
+      </div>
+
+      <div id="enum-ColorID" class="panel">
+        <div class="title-label">
+          <span class="label">enum</span>
+          <span class="text">ColorID</span>
+        </div>
+        <p>
+          カラーネームで指定できる色。全15種類。<br>
+        </p>
+
+        <!-- 列挙値の種類 -->
+        <div class="enum-list">
+          <div class="enum-item">
+            <dt>Red</dt>
+            <dd><font color="ff0000">■</font> 赤色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Orange</dt>
+            <dd><font color="ff8000">■</font> オレンジ色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Yellow</dt>
+            <dd><font color="ffff00">■</font> 黄色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Lime</dt>
+            <dd><font color="80ff00">■</font> ライム色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Green</dt>
+            <dd><font color="00ff00">■</font> 緑色</dd>
+          </div>
+          
+          <div class="enum-item">
+            <dt>SpringGreen</dt>
+            <dd><font color="00ff80">■</font> 青緑色</dd>
+          </div>
+          
+          <div class="enum-item">
+            <dt>SkyBlue</dt>
+            <dd><font color="00ffff">■</font> 空色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Cyan</dt>
+            <dd><font color="0080ff">■</font> シアン色</dd>
+          </div>
+          
+          <div class="enum-item">
+            <dt>Blue</dt>
+            <dd><font color="0000ff">■</font> 青色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Purple</dt>
+            <dd><font color="8000ff">■</font> 紫色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Pink</dt>
+            <dd><font color="ff00ff">■</font> ピンク色</dd>
+          </div>
+          
+          <div class="enum-item">
+            <dt>Magenta</dt>
+            <dd><font color="ff0080">■</font> マゼンタ色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>White</dt>
+            <dd><font color="ffffff">■</font> 白色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Gray</dt>
+            <dd><font color="808080">■</font> 灰色</dd>
+          </div>
+
+          <div class="enum-item">
+            <dt>Black</dt>
+            <dd><font color="000000">■</font> 黒色</dd>
+          </div>
+        </div>
+      </div>
+
+      <div id="class-MY_COLOR" class="panel">
+        <div class="title-label">
+          <span class="label">class</span>
+          <span class="text">MY_COLOR</span>
+        </div>
+        <p>
+          汎用カラー型。<br>
+          RGBA入力やカラーコード入力など、幅広く対応しています。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              <a href="#class-MY_COLOR-GetColorU8">GetColorU8</a>
+              <a href="#class-MY_COLOR-GetColorCode">GetColorCode</a>
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#class-MY_COLOR-MY_COLOR">MY_COLOR</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [C] MY_COLOR -->
+        <details id="class-MY_COLOR-MY_COLOR" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            MY_COLOR
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。白色になります。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                MY_COLOR();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            RGBで入力するバージョン。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                MY_COLOR(int _r, int _g, int _b);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">int</span> _r</dt>
+                  <dd>赤成分</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> _g</dt>
+                  <dd>緑成分</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> _b</dt>
+                  <dd>青成分</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード3 -->
+          <div class="fn-desc">
+            RGBと透明度で入力するバージョン。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                MY_COLOR(int _r, int _g, int _b, int _a);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <div class="fn-item">
+                  <dt><span class="type">int</span> _r</dt>
+                  <dd>赤成分</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> _g</dt>
+                  <dd>緑成分</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> _b</dt>
+                  <dd>青成分</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">int</span> _a</dt>
+                  <dd>透明度 (0で透明、255で不透明)</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード4 -->
+          <div class="fn-desc">
+            カラーコードで入力するバージョン。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                MY_COLOR(UINT _colorCode);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <div class="fn-item">
+                    <dt><span class="type">UINT</span> _colorCode</dt>
+                    <dd>カラーコード</dd>
+                  </div>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード5 -->
+          <div class="fn-desc">
+            <a href="#enum-ColorID" class="inline-link">ColorID</a>
+            で入力するバージョン。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                MY_COLOR(ColorID id);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#enum-ColorID" class="inline-link">ColorID</a>
+                    </span> 
+                    id</dt>
+                  <dd>カラーネーム</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] GetColorU8 -->
+        <details id="class-MY_COLOR-GetColorU8" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            GetColorU8
+          </summary>
+          <div class="fn-desc">
+            カラーを <span class="inline-code">COLOT_U8</span> 型で取得します。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                COLOR_U8 GetColorU8() const;
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">COLOR_U8</span></dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [M] GetColorCode -->
+        <details id="class-MY_COLOR-GetColorCode" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag method">M</span>
+            GetColorCode
+          </summary>
+          <div class="fn-desc">
+            カラーを <span class="inline-code">UINT</span> 型で取得します。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                UINT GetColorCode() const;
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">UINT</span></dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-Circle" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">Circle</span>
+        </div>
+        <p>
+          円形データ。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Circle-pos">pos</a>
+              <a href="#struct-Circle-r">r</a>
+              <a href="#struct-Circle-color">color</a>
+              <a href="#struct-Circle-thick">thick</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Circle-Circle">Circle</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] pos -->
+        <details id="struct-Circle-pos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            pos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] r -->
+        <details id="struct-Circle-r" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            r
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> r</dt>
+                  <dd>半径</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] color -->
+        <details id="struct-Circle-color" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            color
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    color</dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] thick -->
+        <details id="struct-Circle-thick" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            thick
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] Circle -->
+        <details id="struct-Circle-Circle" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            Circle
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Circle();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Circle(DBL_XY _pos, float _r, MY_COLOR _color, float _thick);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _pos</dt>
+                  <dd>座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _r</dt>
+                  <dd>半径</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _color
+                  </dt>
+                  <dd>カラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-Box" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">Box</span>
+        </div>
+        <p>
+          四角形データ。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Box-pos">pos</a>
+              <a href="#struct-Box-size">size</a>
+              <a href="#struct-Box-color">color</a>
+              <a href="#struct-Box-thick">thick</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Box-Box">Box</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] pos -->
+        <details id="struct-Box-pos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            pos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] size -->
+        <details id="struct-Box-size" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            size
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> size</dt>
+                  <dd>サイズ (縦幅, 横幅)</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] color -->
+        <details id="struct-Box-color" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            color
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    color</dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] thick -->
+        <details id="struct-Box-thick" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            thick
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] Box -->
+        <details id="struct-Box-Box" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            Box
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Box();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Box(DBL_XY _pos, DBL_XY _size, MY_COLOR _color, float _thick);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _pos</dt>
+                  <dd>座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _size</dt>
+                  <dd>サイズ</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _color
+                  </dt>
+                  <dd>カラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-Triangle" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">Triangle</span>
+        </div>
+        <p>
+          三角形データ。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Triangle-pos">pos</a>
+              <a href="#struct-Triangle-color">color</a>
+              <a href="#struct-Triangle-thick">thick</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Triangle-Triangle">Triangle</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] pos -->
+        <details id="struct-Triangle-pos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            pos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos[3]</dt>
+                  <dd>座標 (3つ)</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] color -->
+        <details id="struct-Triangle-color" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            color
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    color</dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] thick -->
+        <details id="struct-Triangle-thick" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            thick
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] Triangle -->
+        <details id="struct-Triangle-Triangle" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            Triangle
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Triangle();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Triangle(DBL_XY _pos1, DBL_XY _pos2, DBL_XY _pos3, MY_COLOR _color, float _thick);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _pos1</dt>
+                  <dd>座標1</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _pos2</dt>
+                  <dd>座標2</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _pos3</dt>
+                  <dd>座標3</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _color
+                  </dt>
+                  <dd>カラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-Line" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">Line</span>
+        </div>
+        <p>
+          直線データ。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Line-stPos">stPos</a>
+              <a href="#struct-Line-edPos">edPos</a>
+              <a href="#struct-Line-color">color</a>
+              <a href="#struct-Line-thick">thick</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Line-Line">Line</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] stPos -->
+        <details id="struct-Line-stPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            stPos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> stPos</dt>
+                  <dd>始点座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] edPos -->
+        <details id="struct-Line-edPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            edPos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> edPos</dt>
+                  <dd>終点座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] color -->
+        <details id="struct-Line-color" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            color
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    color</dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] thick -->
+        <details id="struct-Line-thick" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            thick
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] Line -->
+        <details id="struct-Line-Line" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            Line
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Line();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Line(DBL_XY _stPos, DBL_XY _edPos, MY_COLOR _color, float _thick);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _stPos</dt>
+                  <dd>始点座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _edPos</dt>
+                  <dd>終点座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _color
+                  </dt>
+                  <dd>カラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-Pie" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">Pie</span>
+        </div>
+        <p>
+          扇形データ。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Pie-pos">pos</a>
+              <a href="#struct-Pie-r">r</a>
+              <a href="#struct-Pie-stAng">stAng</a>
+              <a href="#struct-Pie-arcAng">arcAng</a>
+              <a href="#struct-Pie-color">color</a>
+              <a href="#struct-Pie-thick">thick</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Line-Line">Line</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] pos -->
+        <details id="struct-Pie-pos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            pos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] r -->
+        <details id="struct-Pie-r" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            r
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">double</span> r</dt>
+                  <dd>半径</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] stAng -->
+        <details id="struct-Pie-stAng" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            stAng
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">double</span> stAng</dt>
+                  <dd>開始角度</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] arcAng -->
+        <details id="struct-Pie-arcAng" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            arcAng
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">double</span> arcAng</dt>
+                  <dd>弧の角度</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] color -->
+        <details id="struct-Pie-color" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            color
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    color</dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] thick -->
+        <details id="struct-Pie-thick" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            thick
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] Pie -->
+        <details id="struct-Pie-Pie" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            Pie
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Pie();
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <!-- 定義 -->
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Pie(DBL_XY _pos, double _r, double _stAng, double _arcAng, MY_COLOR _color, float _thick);
+              </code></pre>
+            </div>
+            <!-- 引数 -->
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _pos</dt>
+                  <dd>座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> _r</dt>
+                  <dd>半径</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> _stAng</dt>
+                  <dd>開始角度</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">double</span> _arcAng</dt>
+                  <dd>弧の角度</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _color
+                  </dt>
+                  <dd>カラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _thick</dt>
+                  <dd>枠線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+            <!-- 返り値 -->
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-BezierLine" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">BezierLine</span>
+        </div>
+        <p>
+          ベジエ曲線データ。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-BezierLine-stPos">stPos</a>
+              <a href="#struct-BezierLine-edPos">edPos</a>
+              <a href="#struct-BezierLine-stContrPos">stContrPos</a>
+              <a href="#struct-BezierLine-edContrPos">edContrPos</a>
+              <a href="#struct-BezierLine-color">color</a>
+              <a href="#struct-BezierLine-thick">thick</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-BezierLine-BezierLine">BezierLine</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] stPos -->
+        <details id="struct-BezierLine-stPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            stPos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> stPos</dt>
+                  <dd>始点座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] edPos -->
+        <details id="struct-BezierLine-edPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            edPos
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> edPos</dt>
+                  <dd>終点座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] stContrPos -->
+        <details id="struct-BezierLine-stContrPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            stContrPos
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> stContrPos</dt>
+                  <dd>始点側制御点</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] edContrPos -->
+        <details id="struct-BezierLine-edContrPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            edContrPos
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> edContrPos</dt>
+                  <dd>終点側制御点</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] color -->
+        <details id="struct-BezierLine-color" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            color
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    color</dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] thick -->
+        <details id="struct-BezierLine-thick" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            thick
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> thick</dt>
+                  <dd>線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] BezierLine -->
+        <details id="struct-BezierLine-BezierLine" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            BezierLine
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                BezierLine();
+              </code></pre>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                BezierLine(DBL_XY _stPos, DBL_XY _edPos, DBL_XY _stContrPos, DBL_XY _edContrPos, MY_COLOR _color, float _thick);
+              </code></pre>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _stPos</dt>
+                  <dd>始点座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _edPos</dt>
+                  <dd>終点座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _stContrPos</dt>
+                  <dd>始点側制御点</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _edContrPos</dt>
+                  <dd>終点側制御点</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _color
+                  </dt>
+                  <dd>カラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _thick</dt>
+                  <dd>線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-Spline" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">Spline</span>
+        </div>
+        <p>
+          スプライン曲線データ。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Spline-points">points</a>
+              <a href="#struct-Spline-color">color</a>
+              <a href="#struct-Spline-thick">thick</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Spline-Spline">Spline</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] points -->
+        <details id="struct-Spline-points" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            points
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">vector&lt;DBL_XY&gt;</span> points</dt>
+                  <dd>制御点</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] color -->
+        <details id="struct-Spline-color" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            color
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    color</dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] thick -->
+        <details id="struct-Spline-thick" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            thick
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> thick</dt>
+                  <dd>線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] Spline -->
+        <details id="struct-Spline-Spline" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            Spline
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Spline();
+              </code></pre>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Spline(const vector<DBL_XY>& _points, MY_COLOR _color, float _thick);
+              </code></pre>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">vector&lt;DBL_XY&gt;</span> _points</dt>
+                  <dd>制御点</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _color
+                  </dt>
+                  <dd>カラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _thick</dt>
+                  <dd>線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-Polygon" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">Polygon</span>
+        </div>
+        <p>
+          ポリゴンデータ。
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Polygon-pos">pos</a>
+              <a href="#struct-Polygon-points">points</a>
+              <a href="#struct-Polygon-color">color</a>
+              <a href="#struct-Polygon-thick">thick</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Polygon-Polygon">Polygon</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] pos -->
+        <details id="struct-Polygon-pos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            pos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> pos</dt>
+                  <dd>座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] points -->
+        <details id="struct-Polygon-points" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            points
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">vector&lt;DBL_XY&gt;</span> points</dt>
+                  <dd>頂点</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] color -->
+        <details id="struct-Polygon-color" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            color
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    color</dt>
+                  <dd>カラー</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] thick -->
+        <details id="struct-Polygon-thick" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            thick
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">float</span> thick</dt>
+                  <dd>線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] Polygon -->
+        <details id="struct-Polygon-Polygon" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            Polygon
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Polygon();
+              </code></pre>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Polygon(DBL_XY _pos, const vector<DBL_XY>& _points, MY_COLOR _color, float _thick);
+              </code></pre>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XY</span> _pos</dt>
+                  <dd>座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">vector&lt;DBL_XY&gt;</span> _points</dt>
+                  <dd>頂点</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _color
+                  </dt>
+                  <dd>カラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">float</span> _thick</dt>
+                  <dd>線の太さ</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <div id="struct-Box3D" class="panel">
+        <div class="title-label">
+          <span class="label">struct</span>
+          <span class="text">Box3D</span>
+        </div>
+        <p>
+          3Dキューブデータ。(試作品)
+        </p>
+
+        <div class="class-member">
+
+          <!-- プロパティ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-prop">プロパティ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Box3D-stPos">stPos</a>
+              <a href="#struct-Box3D-edPos">edPos</a>
+              <a href="#struct-Box3D-difColor">difColor</a>
+              <a href="#struct-Box3D-spcColor">spcColor</a>
+            </div>
+          </div>
+
+          <!-- メソッド -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-method">メソッド</span>
+            </div>
+            <div class="class-links">
+              なし
+            </div>
+          </div>
+
+          <!-- コンストラクタ -->
+          <div class="class-section">
+            <div class="class-tags">
+              <span class="tag tag-constructor">コンストラクタ</span>
+            </div>
+            <div class="class-links">
+              <a href="#struct-Box3D-Box3D">Box3D</a>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- 使用例 -->
+        <details class="fn-toggle">
+          <summary class="subtitle">
+            使用例
+          </summary>
+
+          <div class="fn-meta no-grid">
+            <p>
+              TODO
+            </p>
+            <pre class="code-block"><code class="language-cpp">
+              TODO
+            </code></pre>
+          </div>
+        </details>
+
+        <hr>
+        <div class="fn-guide">
+          クリック / タップで開く
+        </div>
+
+        <!-- [P] stPos -->
+        <details id="struct-Box3D-stPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            stPos
+          </summary>
+
+          <div class="fn-meta">
+            <!-- 型 -->
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XYZ</span> stPos</dt>
+                  <dd>始点座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] edPos -->
+        <details id="struct-Box3D-edPos" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            edPos
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XYZ</span> edPos</dt>
+                  <dd>終点座標</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] difColor -->
+        <details id="struct-Box3D-difColor" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            difColor
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    difColor</dt>
+                  <dd>ディフューズカラー (光源からまっすぐ当たる光の色)</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [P] spcColor -->
+        <details id="struct-Box3D-spcColor" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag prop">P</span>
+            spcColor
+          </summary>
+
+          <div class="fn-meta">
+            <div class="fn-block">
+              <div class="fn-title">型</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                      <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    spcColor</dt>
+                  <dd>スペキュラカラー (鏡面反射の色)</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+
+        <!-- [C] Box3D -->
+        <details id="struct-Box3D-Box3D" class="fn-toggle">
+          <summary class="subtitle">
+            <span class="mini-tag constructor">C</span>
+            Box3D
+          </summary>
+
+          <!-- オーバーロード1 -->
+          <div class="fn-desc">
+            引数なし。
+          </div>
+          <div class="fn-meta">
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Box3D();
+              </code></pre>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            引数あり。
+          </div>
+          <div class="fn-meta">
+            <div class="fn-signature">
+              <pre><code class="language-cpp">
+                Box3D(DBL_XYZ _stPos, DBL_XYZ _edPos, MY_COLOR _difColor, MY_COLOR _spcColor);
+              </code></pre>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">引数</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XYZ</span> _stPos</dt>
+                  <dd>始点座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt><span class="type">DBL_XYZ</span> _edPos</dt>
+                  <dd>終点座標</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _difColor
+                  </dt>
+                  <dd>ディフューズカラー</dd>
+                </div>
+                <div class="fn-item">
+                  <dt>
+                    <span class="type">
+                    <a href="#class-MY_COLOR" class="inline-link">MY_COLOR</a>
+                    </span>
+                    _spcColor
+                  </dt>
+                  <dd>スペキュラカラー</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="fn-block">
+              <div class="fn-title">返り値</div>
+              <dl class="fn-list">
+                <div class="fn-item">
+                  <dt>なし</dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <p>
+      <a href="../../" class="back-button">戻る</a>
+    </p>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <small>
+      ©2026 KR Library
+    </small>
+  </footer>
+
+  <!-- jsファイル -->
+  <script src="../../plugins/KrLib_html/kr_common.js"></script>
+  <script src="../../js/common.js"></script>
+
+  <!-- マウスカーソル -->
+  <div class="cursor"></div>
+</body>
+</html>

@@ -1,5 +1,12 @@
 
 /* =============================== 
+  ▼ ソースコード色付け ▼
+================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  hljs.highlightAll();
+});
+
+/* =============================== 
   ▼ 背景演出 ▼
 ================================ */
 const canvas = document.getElementById("fx");
@@ -55,6 +62,20 @@ function bgDraw() {
   requestAnimationFrame(bgDraw);
 }
 bgDraw();
+
+/* =============================== 
+  ▼ スムーススクロール ▼
+  aタグをクリックした時のアニメーション
+================================ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id.length > 1) {
+      e.preventDefault();
+      document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
 
 /* =============================== 
   ▼ カーソルの発光(PC用) ▼

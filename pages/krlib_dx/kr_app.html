@@ -8,9 +8,6 @@
   <!--ソースコード色付け用 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 
   <!-- cssファイル -->
   <link rel="stylesheet" href="../../plugins/KrLib_html/kr_common.css">
@@ -71,17 +68,17 @@
               <span class="tag tag-method">メソッド</span>
             </div>
             <div class="class-links">
-              <a href="#method-GetWindowRect">GetWindowRect</a>
-              <a href="#method-GetWindowWid">GetWindowWid</a>
-              <a href="#method-GetWindowHei">GetWindowHei</a>
-              <a href="#method-GetWindowSize">GetWindowSize</a>
-              <a href="#method-GetFps">GetFps</a>
-              <a href="#method-ToWorldPos">ToWorldPos</a>
-              <a href="#method-ToCameraPos">ToCameraPos</a>
-              <a href="#method-InitDx">InitDx</a>
-              <a href="#method-LoopDx">LoopDx</a>
-              <a href="#method-Reset">Reset</a>
-              <a href="#method-Quit">Quit</a>
+              <a href="#class-App-GetWindowRect">GetWindowRect</a>
+              <a href="#class-App-GetWindowWid">GetWindowWid</a>
+              <a href="#class-App-GetWindowHei">GetWindowHei</a>
+              <a href="#class-App-GetWindowSize">GetWindowSize</a>
+              <a href="#class-App-GetFps">GetFps</a>
+              <a href="#class-App-ToWorldPos">ToWorldPos</a>
+              <a href="#class-App-ToCameraPos">ToCameraPos</a>
+              <a href="#class-App-InitDx">InitDx</a>
+              <a href="#class-App-LoopDx">LoopDx</a>
+              <a href="#class-App-Reset">Reset</a>
+              <a href="#class-App-Quit">Quit</a>
             </div>
           </div>
         </div>
@@ -118,6 +115,8 @@
                 _In_     LPSTR     lpCmdLine,
                 _In_     int       nCmdShow
               ){
+                /* [略] ManagerInsts::NewManager をここに記述 */
+
                 try {
                   //初期化処理.
                   App::InitDx(WINDOW_WID, WINDOW_HEI, IS_WINDOW_MODE, FPS, false);
@@ -148,7 +147,7 @@
         </div>
 
         <!-- [M] GetWindowRect -->
-        <details id="method-GetWindowRect" class="fn-toggle">
+        <details id="class-App-GetWindowRect" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -187,7 +186,7 @@
         </details>
 
         <!-- [M] GetWindowWid -->
-        <details id="method-GetWindowWid" class="fn-toggle">
+        <details id="class-App-GetWindowWid" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -226,7 +225,7 @@
         </details>
 
         <!-- [M] GetWindowHei -->
-        <details id="method-GetWindowHei" class="fn-toggle">
+        <details id="class-App-GetWindowHei" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -265,7 +264,7 @@
         </details>
 
         <!-- [M] GetWindowSize -->
-        <details id="method-GetWindowSize" class="fn-toggle">
+        <details id="class-App-GetWindowSize" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -304,7 +303,7 @@
         </details>
 
         <!-- [M] GetFps -->
-        <details id="method-GetFps" class="fn-toggle">
+        <details id="class-App-GetFps" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -343,7 +342,7 @@
         </details>
 
         <!-- [M] ToWorldPos -->
-        <details id="method-ToWorldPos" class="fn-toggle">
+        <details id="class-App-ToWorldPos" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -383,7 +382,7 @@
         </details>
 
         <!-- [M] ToCameraPos -->
-        <details id="method-ToCameraPos" class="fn-toggle">
+        <details id="class-App-ToCameraPos" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -423,7 +422,7 @@
         </details>
 
         <!-- [M] InitDx -->
-        <details id="method-InitDx" class="fn-toggle">
+        <details id="class-App-InitDx" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -487,7 +486,7 @@
         </details>
   
         <!-- [M] LoopDx -->
-        <details id="method-LoopDx" class="fn-toggle">
+        <details id="class-App-LoopDx" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -527,7 +526,7 @@
         </details>
 
         <!-- [M] Reset -->
-        <details id="method-Reset" class="fn-toggle">
+        <details id="class-App-Reset" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>
@@ -566,7 +565,7 @@
         </details>
 
         <!-- [M] Quit -->
-        <details id="method-Quit" class="fn-toggle">
+        <details id="class-App-Quit" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             <span class="mini-tag other">static</span>

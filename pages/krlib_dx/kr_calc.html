@@ -8,9 +8,6 @@
   <!--ソースコード色付け用 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
 
   <!-- cssファイル -->
   <link rel="stylesheet" href="../../plugins/KrLib_html/kr_common.css">
@@ -53,6 +50,7 @@
           イージングの種類。
         </p>
 
+        <!-- 列挙値の種類 -->
         <div class="enum-list">
           <div class="enum-item">
             <dt>InQuad</dt>
@@ -85,6 +83,7 @@
           ループイージングの種類。
         </p>
 
+        <!-- 列挙値の種類 -->
         <div class="enum-list">
           <div class="enum-item">
             <dt>CosLoop</dt>
@@ -93,7 +92,7 @@
         </div>
       </div>
 
-      <div class="panel">
+      <div id="namespace-Calc" class="panel">
         <div class="title-label">
           <span class="label">namespace</span>
           <span class="text">Calc</span>
@@ -110,26 +109,26 @@
               <span class="tag tag-method">メソッド</span>
             </div>
             <div class="class-links">
-              <a href="#method-HitCirCir">HitCirCir</a>
-              <a href="#method-HitBoxBox">HitBoxBox</a>
-              <a href="#method-HitBoxCir">HitBoxCir</a>
-              <a href="#method-HitLineCir">HitLineCir</a>
-              <a href="#method-HitPie">HitPie</a>
-              <a href="#method-FixPosInArea">FixPosInArea</a>
-              <a href="#method-IsOutInArea">IsOutInArea</a>
-              <a href="#method-Dist">Dist</a>
-              <a href="#method-MidPos">MidPos</a>
-              <a href="#method-ArcPos">ArcPos</a>
-              <a href="#method-FacingAng">FacingAng</a>
-              <a href="#method-AngToVector">AngToVector</a>
-              <a href="#method-BezierPoint">BezierPoint</a>
-              <a href="#method-SplinePoint">SplinePoint</a>
-              <a href="#method-PhysicsVel">PhysicsVel</a>
-              <a href="#method-AnimEase">AnimEase</a>
-              <a href="#method-AnimWave">AnimWave</a>
-              <a href="#method-RandNum">RandNum</a>
-              <a href="#method-RandNums">RandNums</a>
-              <a href="#method-GetDecimal">GetDecimal</a>
+              <a href="#namespace-Calc-HitCirCir">HitCirCir</a>
+              <a href="#namespace-Calc-HitBoxBox">HitBoxBox</a>
+              <a href="#namespace-Calc-HitBoxCir">HitBoxCir</a>
+              <a href="#namespace-Calc-HitLineCir">HitLineCir</a>
+              <a href="#namespace-Calc-HitPie">HitPie</a>
+              <a href="#namespace-Calc-FixPosInArea">FixPosInArea</a>
+              <a href="#namespace-Calc-IsOutInArea">IsOutInArea</a>
+              <a href="#namespace-Calc-Dist">Dist</a>
+              <a href="#namespace-Calc-MidPos">MidPos</a>
+              <a href="#namespace-Calc-ArcPos">ArcPos</a>
+              <a href="#namespace-Calc-FacingAng">FacingAng</a>
+              <a href="#namespace-Calc-AngToVector">AngToVector</a>
+              <a href="#namespace-Calc-BezierPoint">BezierPoint</a>
+              <a href="#namespace-Calc-SplinePoint">SplinePoint</a>
+              <a href="#namespace-Calc-PhysicsVel">PhysicsVel</a>
+              <a href="#namespace-Calc-AnimEase">AnimEase</a>
+              <a href="#namespace-Calc-AnimWave">AnimWave</a>
+              <a href="#namespace-Calc-RandNum">RandNum</a>
+              <a href="#namespace-Calc-RandNums">RandNums</a>
+              <a href="#namespace-Calc-GetDecimal">GetDecimal</a>
             </div>
           </div>
         </div>
@@ -150,28 +149,27 @@
               ランダムな方向に移動する。
             </p>
             <pre class="code-block"><code class="language-cpp">
-              //ランダムな角度(0～360度)
-              double ang = Calc::RandNum(0, 360, true);
-              //角度 → ベクトルに変換.
-              DBL_XY dir = Calc::AngToVector(ang);
-              //移動.
-              pos += dir * 5.0;
+              void Update() {
+                //ランダムな角度(0～360度)
+                double ang = Calc::RandNum(0, 360, true);
+                //角度をベクトルに変換.
+                DBL_XY dir = Calc::AngToVector(ang);
+                //座標移動.
+                pos += dir * 5.0;
+              }
             </code></pre>
             <p>
-              座標計算系。
+              円形同士の当たり判定。
             </p>
             <pre class="code-block"><code class="language-cpp">
-              //2つの座標の中点を取得.
-              DBL_XY center   = Calc::MidPos(posA, posB);
-              //距離を取得.
-              double distance = Calc::Dist(posA, posB);
-            </code></pre>
-            <p>
-              当たり判定。
-            </p>
-            <pre class="code-block"><code class="language-cpp">
-              if (Calc::HitCirCir(player, enemy)) {
-                //当たった.
+              void Update() {
+                //プレイヤーと敵の円形データを取得.
+                const Circle* hitPly = player.GetCir();
+                const Circle* hitEnm = enemy.GetCir();
+                //プレイヤーと敵が当たったら.
+                if (Calc::HitCirCir(*hitPly, *hitEnm)) {
+                  //ダメージ処理.
+                }
               }
             </code></pre>
 
@@ -184,13 +182,13 @@
         </div>
 
         <!-- [M] HitCirCir -->
-        <details id="method-HitCirCir" class="fn-toggle">
+        <details id="namespace-Calc-HitCirCir" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             HitCirCir
           </summary>
           <div class="fn-desc">
-            円と円が当たっているか判定します。
+            円形と円形が当たっているかを判定します。
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -205,11 +203,11 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">const Circle&</span> cir1</dt>
-                  <dd>円のデータ1</dd>
+                  <dd>円形のデータ1</dd>
                 </div>
                 <div class="fn-item">
                   <dt><span class="type">const Circle&</span> cir2</dt>
-                  <dd>円のデータ2</dd>
+                  <dd>円形のデータ2</dd>
                 </div>
               </dl>
             </div>
@@ -219,7 +217,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">bool</span></dt>
-                  <dd>当たってるかどうか</dd>
+                  <dd>当たっているかどうか</dd>
                 </div>
               </dl>
             </div>
@@ -227,13 +225,13 @@
         </details>
 
         <!-- [M] HitBoxBox -->
-        <details id="method-HitBoxBox" class="fn-toggle">
+        <details id="namespace-Calc-HitBoxBox" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             HitBoxBox
           </summary>
           <div class="fn-desc">
-            四角形と四角形が当たっているか判定します。
+            四角形と四角形が当たっているかを判定します。
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -262,7 +260,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">bool</span></dt>
-                  <dd>当たってるかどうか</dd>
+                  <dd>当たっているかどうか</dd>
                 </div>
               </dl>
             </div>
@@ -270,13 +268,13 @@
         </details>
 
         <!-- [M] HitBoxCir -->
-        <details id="method-HitBoxCir" class="fn-toggle">
+        <details id="namespace-Calc-HitBoxCir" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             HitBoxCir
           </summary>
           <div class="fn-desc">
-            四角形と円が当たっているか判定します。
+            四角形と円形が当たっているかを判定します。
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -295,7 +293,7 @@
                 </div>
                 <div class="fn-item">
                   <dt><span class="type">const Circle&</span> cir</dt>
-                  <dd>円のデータ</dd>
+                  <dd>円形のデータ</dd>
                 </div>
               </dl>
             </div>
@@ -305,7 +303,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">bool</span></dt>
-                  <dd>当たってるかどうか</dd>
+                  <dd>当たっているかどうか</dd>
                 </div>
               </dl>
             </div>
@@ -313,13 +311,13 @@
         </details>
 
         <!-- [M] HitLineCir -->
-        <details id="method-HitLineCir" class="fn-toggle">
+        <details id="namespace-Calc-HitLineCir" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             HitLineCir
           </summary>
           <div class="fn-desc">
-            線と円が当たっているか判定します。
+            直線と円形が当たっているかを判定します。
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -334,11 +332,11 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">const Line&</span> line</dt>
-                  <dd>線のデータ</dd>
+                  <dd>直線のデータ</dd>
                 </div>
                 <div class="fn-item">
                   <dt><span class="type">const Circle&</span> cir</dt>
-                  <dd>円のデータ</dd>
+                  <dd>円形のデータ</dd>
                 </div>
               </dl>
             </div>
@@ -348,7 +346,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">bool</span></dt>
-                  <dd>当たってるかどうか</dd>
+                  <dd>当たっているかどうか</dd>
                 </div>
               </dl>
             </div>
@@ -356,13 +354,13 @@
         </details>
 
         <!-- [M] HitPie -->
-        <details id="method-HitPie" class="fn-toggle">
+        <details id="namespace-Calc-HitPie" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             HitPie
           </summary>
           <div class="fn-desc">
-            扇形に入っているか判定します。
+            扇形に入っているかを判定します。
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -391,7 +389,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">bool</span></dt>
-                  <dd>当たってるかどうか</dd>
+                  <dd>当たっているかどうか</dd>
                 </div>
               </dl>
             </div>
@@ -399,7 +397,7 @@
         </details>
 
         <!-- [M] FixPosInArea -->
-        <details id="method-FixPosInArea" class="fn-toggle">
+        <details id="namespace-Calc-FixPosInArea" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             FixPosInArea
@@ -445,7 +443,7 @@
         </details>
 
         <!-- [M] IsOutInArea -->
-        <details id="method-IsOutInArea" class="fn-toggle">
+        <details id="namespace-Calc-IsOutInArea" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             IsOutInArea
@@ -496,11 +494,13 @@
         </details>
 
         <!-- [M] Dist -->
-        <details id="method-Dist" class="fn-toggle">
+        <details id="namespace-Calc-Dist" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             Dist
           </summary>
+
+          <!-- オーバーロード1 -->
           <div class="fn-desc">
             2つの座標の距離を計算します。
           </div>
@@ -537,6 +537,10 @@
             </div>
           </div>
 
+          <!-- オーバーロード2 -->
+          <div class="fn-desc">
+            座標がDBL_XY型バージョン。
+          </div>
           <div class="fn-meta">
             <!-- 定義 -->
             <div class="fn-signature">
@@ -572,7 +576,7 @@
         </details>
 
         <!-- [M] MidPos -->
-        <details id="method-MidPos" class="fn-toggle">
+        <details id="namespace-Calc-MidPos" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             MidPos
@@ -607,7 +611,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">DBL_XY</span></dt>
-                  <dd>中央座標</dd>
+                  <dd>求めた座標</dd>
                 </div>
               </dl>
             </div>
@@ -615,13 +619,13 @@
         </details>
         
         <!-- [M] ArcPos -->
-        <details id="method-ArcPos" class="fn-toggle">
+        <details id="namespace-Calc-ArcPos" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             ArcPos
           </summary>
           <div class="fn-desc">
-            角度と長さから円周上の座標を計算します。
+            円周上の座標を計算します。(posからang方向にlen移動した座標)
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -640,7 +644,7 @@
                 </div>
                 <div class="fn-item">
                   <dt><span class="type">double</span> ang</dt>
-                  <dd>角度</dd>
+                  <dd>角度(Degree)</dd>
                 </div>
                 <div class="fn-item">
                   <dt><span class="type">double</span> len</dt>
@@ -654,7 +658,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">DBL_XY</span></dt>
-                  <dd>posからang方向にlenずらした座標</dd>
+                  <dd>求めた座標</dd>
                 </div>
               </dl>
             </div>
@@ -662,13 +666,13 @@
         </details>
 
         <!-- [M] FacingAng -->
-        <details id="method-FacingAng" class="fn-toggle">
+        <details id="namespace-Calc-FacingAng" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             FacingAng
           </summary>
           <div class="fn-desc">
-            始点座標から対象座標への方向を計算します。
+            始点から終点を見た時の角度を計算します。
           </div>
           <div class="fn-meta">
             <!-- 定義 -->
@@ -697,7 +701,7 @@
               <dl class="fn-list">
                 <div class="fn-item">
                   <dt><span class="type">double</span></dt>
-                  <dd>始点から終点を見た時の角度</dd>
+                  <dd>求めた角度</dd>
                 </div>
               </dl>
             </div>
@@ -705,7 +709,7 @@
         </details>
 
         <!-- [M] AngToVector -->
-        <details id="method-AngToVector" class="fn-toggle">
+        <details id="namespace-Calc-AngToVector" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             AngToVector
@@ -744,7 +748,7 @@
         </details>
 
         <!-- [M] BezierPoint -->
-        <details id="method-BezierPoint" class="fn-toggle">
+        <details id="namespace-Calc-BezierPoint" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             BezierPoint
@@ -787,7 +791,7 @@
         </details>
 
         <!-- [M] SplinePoint -->
-        <details id="method-SplinePoint" class="fn-toggle">
+        <details id="namespace-Calc-SplinePoint" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             SplinePoint
@@ -834,7 +838,7 @@
         </details>
 
         <!-- [M] PhysicsVel -->
-        <details id="method-PhysicsVel" class="fn-toggle">
+        <details id="namespace-Calc-PhysicsVel" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             PhysicsVel
@@ -892,7 +896,7 @@
         </details>
 
         <!-- [M] AnimEase -->
-        <details id="method-AnimEase" class="fn-toggle">
+        <details id="namespace-Calc-AnimEase" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             AnimEase
@@ -937,7 +941,7 @@
         </details>
 
         <!-- [M] AnimWave -->
-        <details id="method-AnimWave" class="fn-toggle">
+        <details id="namespace-Calc-AnimWave" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             AnimWave
@@ -982,7 +986,7 @@
         </details>
 
         <!-- [M] RandNum -->
-        <details id="method-RandNum" class="fn-toggle">
+        <details id="namespace-Calc-RandNum" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             RandNum
@@ -1037,7 +1041,7 @@
         </details>
 
         <!-- [M] RandNums -->
-        <details id="method-RandNums" class="fn-toggle">
+        <details id="namespace-Calc-RandNums" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             RandNums
@@ -1066,7 +1070,7 @@
                 </div>
                 <div class="fn-item">
                   <dt><span class="type">int</span> count</dt>
-                  <dd>何個の整数を抽選するか(重複なし)</dd>
+                  <dd>何個の整数を抽選するか</dd>
                 </div>
                 <div class="fn-item">
                   <dt>
@@ -1096,7 +1100,7 @@
         </details>
 
         <!-- [M] GetDecimal -->
-        <details id="method-GetDecimal" class="fn-toggle">
+        <details id="namespace-Calc-GetDecimal" class="fn-toggle">
           <summary class="subtitle">
             <span class="mini-tag method">M</span>
             GetDecimal
